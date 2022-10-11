@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VAHS Engineering Club</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<nav class="hambar">
+		<div class="title"><a href="/"><-</a>   Projects</div>
+		<ul class="hambar-list">
+			<li><a href="javascript:void(0);" onclick="blenderMenu()">Blender 3D</a></li>
+			<li>Languages</li>
+			<li>Misc</li>
+			<li>Game Creation</li>
+			<li>Hardware</li>
+			<li>Websites</li>
+		</ul>
+	</nav>
+
+	<div class="skill-list-container">
+		<ul class="blender-list">
+			<li>Thing 1</li>
+			<li>Thing 2</li>
+			<li>Thing 3</li>
+			<li>Thing 4</li>
+		</ul>
+	</div>
+	
+	<script>
+		document.write("testing (:")
+		function blenderMenu() {
+			var x = document.getElementById("blender-list");
+			if (x.style.display === "block") {
+  				x.style.display = "none";
+			} 
+			else {
+  				x.style.display = "block";
+			}
+			System.out.println("hola");
+		} 
+	</script>
+</body>
+</html>
