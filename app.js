@@ -12,7 +12,11 @@ app.use("/img", express.static(__dirname + 'public/img'));
 app.set('views', './views');
 
 app.get("", (req, res) => {
-	res.sendFile(__dirname + "/index.html");
+	res.sendFile(__dirname + "/views/index.html");
+});
+
+app.get("/skills", (req, res) => {
+	res.sendFile(__dirname + "/views/skills.html");
 });
 
 app.listen(port, host, () => {
