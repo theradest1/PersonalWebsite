@@ -1,68 +1,102 @@
 :root {
-  --redish: #CD533B;
-  --offwhite: #FFDCCC;
-  --aqua: #00BFB2;
-  --brown: #49392C;
-  --lavendar: #726E97;
+  --backround: #716969;
+  --margins: #090226;
+  --other1: #FFE45E;
+  --other2: #474A2C;
+  --other3: #C2EFEB;
+  --text: #000;
 }
 
 body {
-  background: var(--offwhite);
+  background: var(--backround);
+  color: var(--backround);
   margin: 0;
 }
 
 .navbar {
-  background: var(--offwhite);
+  background: var(--backround);
+  color: var(--backround);
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 70% 15% 15%;
 }
 
+.navbar-list {
+  margin-top: -1.8em;
+  color: var(--backround);
+}
 .navbar-list li {
-  padding: 0 0 1.15em 0;
+  padding: 0.5em 0;
   font-size: 3.5em;
   font-style: normal;
   list-style-type: none;
 }
 .navbar-list li a {
   text-decoration: none;
-  color: var(--brown);
+  color: var(--text);
 }
 .navbar-list li a:hover {
-  color: black;
   font-weight: bold;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  display: inline-block;
+  -webkit-animation: wavy 1s;
+          animation: wavy 1s;
+  -webkit-animation-delay: calc(0.01s * var(--i));
+          animation-delay: calc(0.01s * var(--i));
 }
 
 .hambar {
-  background: var(--offwhite);
+  background: var(--backround);
 }
 .hambar .title {
   font-size: 3em;
   font-style: normal;
-  color: var(--brown);
+  color: var(--text);
+}
+.hambar .title a {
+  color: var(--text);
+  text-decoration: none;
 }
 .hambar .hambar-list li {
-  padding: 0 0 1.15em 0;
+  list-style-type: none;
+  padding: 0.5em 0;
+  margin-left: -1em;
   font-size: 2em;
   font-style: normal;
   text-decoration: none;
-  color: var(--brown);
+  color: var(--text);
 }
 .hambar .hambar-list li:hover {
-  color: black;
   font-weight: bold;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  display: inline-block;
+  -webkit-animation: wavy 1s;
+          animation: wavy 1s;
+  -webkit-animation-delay: calc(0.01s * var(--i));
+          animation-delay: calc(0.01s * var(--i));
 }
 
+@-webkit-keyframes wavy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wavy {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+}
 .sideways-hero {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   text-orientation: mixed;
   font-weight: 900;
   font-family: Impact;
-  font-size: 5.5em;
+  font-size: 8em;
   padding-right: 0.4em;
   padding-top: 0.1em;
   color: rgba(0, 0, 0, 0.3725490196);

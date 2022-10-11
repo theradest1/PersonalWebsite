@@ -1,64 +1,87 @@
 :root {
-	--redish: #CD533B;
-	--offwhite: #FFDCCC;
-	--aqua: #00BFB2;
-	--brown: #49392C;
-	--lavendar: #726E97;
+	--backround: #716969;
+	--margins: #090226;
+	--other1: #FFE45E;
+	--other2: #474A2C;
+	--other3: #C2EFEB;
+	--text: #000;
 }
 
 body {
-	background: var(--offwhite);
+	background: var(--backround);
+	color: var(--backround);
 	margin: 0;
 }
 
 .navbar {
-	background: var(--offwhite);
+	background: var(--backround);
+	color: var(--backround);
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 70% 15% 15%;
 }
 
 .navbar-list {
+	margin-top: -1.8em;
+	color: var(--backround);
+
 	li {
-		padding: 0 0 1.15em 0;
+		padding: .5em 0;
 		font-size: 3.5em;
 		font-style: normal;
 		list-style-type: none;
 		
 		a {
 			text-decoration: none;
-			color: var(--brown);
+			color: var(--text);
 			&:hover {
-				color: black;
 				font-weight: bold;
-				text-decoration-line: underline;
+				display: inline-block;
+				animation: wavy 1s;
+				animation-delay: calc(.01s * var(--i));
+			}
+		}
+	}
+}
+
+.hambar {
+	background: var(--backround);
+	.title {
+		font-size: 3em;
+		font-style: normal;
+		color: var(--text);
+
+		a {
+			color: var(--text);
+			text-decoration: none;
+		}
+	}
+	
+	.hambar-list {
+		li {
+			list-style-type: none;
+			padding: .5em 0;
+			margin-left: -1em;
+			font-size: 2em;
+			font-style: normal;
+			text-decoration: none;
+			color: var(--text);
+			&:hover {
+				font-weight: bold;
+				display: inline-block;
+				animation: wavy 1s;
+				animation-delay: calc(.01s * var(--i));
 			}
 		}
 		
 	}
 }
 
-.hambar {
-	background: var(--offwhite);
-	.title {
-		font-size: 3em;
-		font-style: normal;
-		color: var(--brown);
+@keyframes wavy {
+	0%,40%,100% {
+	  transform: translateY(0)
 	}
-	
-	.hambar-list {
-		li {
-			padding: 0 0 1.15em 0;
-			font-size: 2em;
-			font-style: normal;
-			text-decoration: none;
-			color: var(--brown);
-			&:hover {
-				color: black;
-				font-weight: bold;
-				text-decoration-line: underline;
-			}
-		}
-		
+	20% {
+	  transform: translateY(-10px)
 	}
 }
 
@@ -67,7 +90,7 @@ body {
 	text-orientation: mixed;
 	font-weight: 900;
 	font-family: Impact;
-	font-size: 5.5em;
+	font-size: 8em;
 	padding-right: .4em;
 	padding-top: .1em;
 	color: #0000005f;
