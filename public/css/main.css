@@ -12,7 +12,38 @@ body {
 }
 
 .navbar {
-  color: var(--lavendar);
+  background: var(--offwhite);
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.navbar-list li {
+  padding: 0 0 1.15em 0;
+  font-size: 3.5em;
+  font-style: normal;
+  list-style-type: none;
+}
+.navbar-list li a {
+  text-decoration: none;
+  color: var(--brown);
+}
+.navbar-list li a:hover {
+  color: black;
+  font-weight: bold;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.sideways-hero {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: 900;
+  font-family: Impact;
+  font-size: 5.5em;
+  padding-right: 0.4em;
+  padding-top: 0.1em;
+  color: rgba(0, 0, 0, 0.3725490196);
 }
 
 /*body {

@@ -12,7 +12,40 @@ body {
 }
 
 .navbar {
-	color: var(--lavendar);
+	background: var(--offwhite);
+	display: grid;
+	grid-template-columns: 70% 30%;
+}
+
+.navbar-list {
+	li {
+		padding: 0 0 1.15em 0;
+		font-size: 3.5em;
+		font-style: normal;
+		list-style-type: none;
+		
+		a {
+			text-decoration: none;
+			color: var(--brown);
+			&:hover {
+				color: black;
+				font-weight: bold;
+				text-decoration-line: underline;
+			}
+		}
+		
+	}
+}
+
+.sideways-hero {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	font-weight: 900;
+	font-family: Impact;
+	font-size: 5.5em;
+	padding-right: .4em;
+	padding-top: .1em;
+	color: #0000005f;
 }
 /*body {
 	background: rgb(255, 255, 255);
