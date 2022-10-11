@@ -34,6 +34,28 @@ body {
           text-decoration-line: underline;
 }
 
+.hambar {
+  background: var(--offwhite);
+}
+.hambar .title {
+  font-size: 3em;
+  font-style: normal;
+  color: var(--brown);
+}
+.hambar .hambar-list li {
+  padding: 0 0 1.15em 0;
+  font-size: 2em;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--brown);
+}
+.hambar .hambar-list li:hover {
+  color: black;
+  font-weight: bold;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .sideways-hero {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;

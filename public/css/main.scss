@@ -37,6 +37,30 @@ body {
 	}
 }
 
+.hambar {
+	background: var(--offwhite);
+	.title {
+		font-size: 3em;
+		font-style: normal;
+		color: var(--brown);
+	}
+	.hambar-list {
+		li {
+			padding: 0 0 1.15em 0;
+			font-size: 2em;
+			font-style: normal;
+			text-decoration: none;
+			color: var(--brown);
+			&:hover {
+				color: black;
+				font-weight: bold;
+				text-decoration-line: underline;
+			}
+		}
+		
+	}
+}
+
 .sideways-hero {
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
