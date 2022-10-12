@@ -21,6 +21,7 @@ body {
 }
 
 .navbar-list {
+	animation: transitionInLeft 1s;
 	margin-top: -1.8em;
 	color: var(--backround);
 
@@ -36,8 +37,7 @@ body {
 			&:hover {
 				font-weight: bold;
 				display: inline-block;
-				animation: wavy 1s;
-				animation-delay: calc(.01s * var(--i));
+				animation: jump .4s;
 			}
 		}
 	}
@@ -69,11 +69,11 @@ body {
 			font-style: normal;
 			text-decoration: none;
 			color: var(--text);
+			white-space: nowrap;
 			&:hover {
 				font-weight: bold;
 				display: inline-block;
-				animation: wavy 1s;
-				animation-delay: calc(.01s * var(--i));
+				animation: jump .4s;
 			}
 		}
 		
@@ -83,7 +83,7 @@ body {
 .skill-list-container {
 	div {
 		display: none;
-		grid-template-columns: 50% 30% 20%;
+		grid-template-columns: max-content auto auto;
 		ul {
 			text-decoration: none;
 			list-style-type: none;
@@ -91,23 +91,41 @@ body {
 		li {
 			color: black;
 		}
-		transition: all 0.4s ease;
 	}
 	
 }
 
-@keyframes wavy {
-	0%,40%,100% {
-	  transform: translateY(0)
+@keyframes jump {
+	0%,100% {
+	  transform: translateX(0);
 	}
-	20% {
-	  transform: translateY(-10px)
+	50% {
+	  transform: translateX(10px);
 	}
 }
 
 @keyframes flip {
 	0%,80% {
-	  transform: rotateY(360deg) 
+	  transform: rotateY(360deg);
+	}
+}
+
+@keyframes transitionInRight {
+	0% {
+		transform: translateX(500%);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+@keyframes transitionInLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0px);
 	}
 }
 
@@ -123,9 +141,12 @@ body {
 	margin: 0;
 	color: #0000005f;
 
+	animation: transitionInRight 1s;
+
 	span {
 		display: inline-block;
-		animation: flip 15s infinite;
-		animation-delay: calc(.2s * var(--i));
+		animation: flip 10s infinite;
+		animation-delay: calc(.3s * var(--i));
+
 	}
 }
