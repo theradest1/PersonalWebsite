@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VAHS Engineering Club</title>
+	<link rel="stylesheet" href="/public/css/main.css">
+	
+</head>
+<body>
+	<div class="title"><a href="/"><-</a>   Projects</div>
+	<nav class="hambar">
+		<ul class="hambar-list">
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('blender', 'grid')">Blender 3D</a></li>
+			<li>Languages</li>
+			<li>Misc</li>
+			<li>Game Creation</li>
+			<li>Hardware</li>
+			<li>Websites</li>
+		</ul>
+
+		<container class="skill-list-container">
+			<div id="blender">
+				<div></div>
+				<ul class="skill-names">
+					<li>Modeling:</li>
+					<li>Animation:</li>
+					<li>Simulations:</li>
+				</ul>
+				<ul class="skill-ratings">
+					<li>4.0/5</li>
+					<li>2.0/5</li>
+					<li>3.5/5</li>
+				</ul>
+			</div>
+		</container>
+	</nav>
+
+	
+
+	<script>
+		function toggleDiv(ID, displayType="block") {
+		  var x = document.getElementById("blender");
+		  if (x.style.display === displayType) {
+			x.style.display = "none";
+		  } else {
+			x.style.display = displayType;
+		  }
+		}
+	</script>
+</body>
+</html>

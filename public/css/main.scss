@@ -43,18 +43,22 @@ body {
 	}
 }
 
+.title {
+	font-size: 3em;
+	font-style: normal;
+	color: var(--text);
+
+	a {
+		color: var(--text);
+		text-decoration: none;
+	}
+}
+
 .hambar {
 	background: var(--backround);
-	.title {
-		font-size: 3em;
-		font-style: normal;
-		color: var(--text);
 
-		a {
-			color: var(--text);
-			text-decoration: none;
-		}
-	}
+	display: grid;
+	grid-template-columns: 70% 20%;
 	
 	.hambar-list {
 		li {
@@ -77,13 +81,27 @@ body {
 }
 
 .skill-list-container {
-	ul {
+	div {
 		display: none;
+		grid-template-columns: 50% 30% 20%;
+		ul {
+			text-decoration: none;
+			list-style-type: none;
+		}
 		li {
-			color: Black;
+			color: black;
 		}
 	}
 	
+}
+
+@keyframes moveUp {
+	0% {
+		transform: translateY(0)
+	}
+	100% {
+		transform: translateY(-100px);
+	}
 }
 
 @keyframes wavy {

@@ -43,17 +43,20 @@ body {
           animation-delay: calc(0.01s * var(--i));
 }
 
-.hambar {
-  background: var(--backround);
-}
-.hambar .title {
+.title {
   font-size: 3em;
   font-style: normal;
   color: var(--text);
 }
-.hambar .title a {
+.title a {
   color: var(--text);
   text-decoration: none;
+}
+
+.hambar {
+  background: var(--backround);
+  display: grid;
+  grid-template-columns: 70% 20%;
 }
 .hambar .hambar-list li {
   list-style-type: none;
@@ -73,13 +76,35 @@ body {
           animation-delay: calc(0.01s * var(--i));
 }
 
-.skill-list-container ul {
+.skill-list-container div {
   display: none;
+  grid-template-columns: 50% 30% 20%;
 }
-.skill-list-container ul li {
-  color: Black;
+.skill-list-container div ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+.skill-list-container div li {
+  color: black;
 }
 
+@-webkit-keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
 @-webkit-keyframes wavy {
   0%, 40%, 100% {
     transform: translateY(0);
@@ -88,7 +113,6 @@ body {
     transform: translateY(-10px);
   }
 }
-
 @keyframes wavy {
   0%, 40%, 100% {
     transform: translateY(0);
