@@ -6,13 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>VAHS Engineering Club</title>
 	<link rel="stylesheet" href="/public/css/main.css">
-	
 </head>
 <body>
-	<div class="title"><a href="/"><-</a>   Projects</div>
-	<nav class="hambar" ID="hambar"> 
+	<div id="title" class="title"><li><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Skills</a></li></div>
+	<nav class="hambar" id="hambar"> 
 		<ul class="hambar-list">
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('blender', 'grid')">Blender 3D</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('blender', 'grid', 'right')">Blender 3D</a></li>
 			<li>Languages</li>
 			<li>Misc</li>
 			<li>Game Creation</li>
@@ -119,19 +118,33 @@
 	
 
 	<script>
-		function toggleDiv(ID, displayType="block") {
+		function slideOut() {
+			document.getElementById("hambar").style.animation = "transitionOutLeft 1s"
+			document.getElementById("title").style.animation = "transitionOutLeft 1s"
+			setTimeout(() => {location.href = '/';}, 800);
+		}
+
+		function toggleDiv(ID, displayType="block", slide = "none") {
 		  var x = document.getElementById(ID);
 		  if (x.style.display === displayType) {
-			x.style.display = "none";
-			setGrid("hambar", "100% 0%");
+			if (slide == "right") {
+				x.style.animation = "transitionOutRight .5s"
+			}
+			else if (slide == "left") {
+				x.style.animation = "transitionOutLeft .5s"
+			}
+
+			setTimeout(() => {x.style.display = "none";}, 500);
 		  } else {
+			if (slide == "right") {
+				x.style.animation = "transitionInRight .5s"
+			}
+			else if (slide == "left") {
+				x.style.animation = "transitionInLeft .5s"
+			}
+
 			x.style.display = displayType;
-			setGrid("hambar", "60% 40%");
 		  }
-		}
-		function setGrid(ID, gridValues) {
-		  var x = document.getElementById(ID);
-		  x.style.gridTemplateColumns = gridValues;
 		}
 	</script>
 </body>

@@ -17,7 +17,14 @@ body {
 	background: var(--backround);
 	color: var(--backround);
 	display: grid;
-	grid-template-columns: 70% 15% 15%;
+	grid-template-columns: 70% 30%;
+}
+
+.sideways-hero-div {
+	display: grid;
+	grid-template-columns: 20% 20%;
+	margin: 0;
+	padding: 0;
 }
 
 .navbar-list {
@@ -47,6 +54,7 @@ body {
 	font-size: 3em;
 	font-style: normal;
 	color: var(--text);
+	animation: transitionInLeft 1s;
 
 	a {
 		color: var(--text);
@@ -56,11 +64,13 @@ body {
 
 .hambar {
 	background: var(--backround);
+	animation: transitionInLeft 1s;
 
 	display: grid;
-	grid-template-columns: 100% 0%;
+	grid-template-columns: 60% 40%;
 	
 	.hambar-list {
+		
 		li {
 			list-style-type: none;
 			padding: .5em 0;
@@ -126,6 +136,24 @@ body {
 
 	100% {
 		transform: translateX(0px);
+	}
+}
+@keyframes transitionOutRight {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(500%);
+	}
+}
+@keyframes transitionOutLeft {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(-100%);
 	}
 }
 

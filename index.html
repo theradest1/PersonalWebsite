@@ -10,12 +10,9 @@
 <body>
 	<nav class="navbar">
 		<div class="navbar-left">
-			<ul class="navbar-list">
+			<ul id="navbar-list-of-the-rings" class="navbar-list">
 				<li>
-					<a class = active_page href="/"> Home </a>
-				</li>
-				<li>
-					<a href="/about-me"> About Me </a>
+					<a href="javascript:void(0);" class="icon" onclick="transitionOut('navbar-list-of-the-rings')">About Me</a>
 				</li>
 				<li>
 					<a href="/skills.html"> Skills </a> 
@@ -29,29 +26,33 @@
 
 			</ul>
 		</div>
-		<div class="sideways-hero">
-			<span style="--i:12">B</span>
-			<span style="--i:11">a</span>
-			<span style="--i:10">k</span>
-			<span style="--i:9">k</span>
-			<span style="--i:8">e</span>
-			<span style="--i:7">n</span>
-		</div>
-		<div class="sideways-hero">
-			<span style="--i:1">L</span>
-			<span style="--i:2">a</span>
-			<span style="--i:3">n</span>
-			<span style="--i:4">d</span>
-			<span style="--i:5">o</span>
-			<span style="--i:6">n</span>
+		<div id = "sideways-hero-div" class = sideways-hero-div>
+			<div class="sideways-hero">
+				<span style="--i:12">B</span>
+				<span style="--i:11">a</span>
+				<span style="--i:10">k</span>
+				<span style="--i:9">k</span>
+				<span style="--i:8">e</span>
+				<span style="--i:7">n</span>
+			</div>
+			<div class="sideways-hero">
+				<span style="--i:1">L</span>
+				<span style="--i:2">a</span>
+				<span style="--i:3">n</span>
+				<span style="--i:4">d</span>
+				<span style="--i:5">o</span>
+				<span style="--i:6">n</span>
+			</div>
 		</div>
 
 	</nav>
 
 	<script>
-		function transitionOut()
+		function transitionOut(ID)
 		{
-			
+			var x = document.getElementsByID(ID);
+			x.style.animation = "transitionOutLeft .5s"
+			//setTimeout(() => {x.style.display = "none";}, 500);
 		}
 	</script>
 </body>
