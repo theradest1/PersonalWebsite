@@ -13,18 +13,16 @@ body {
   margin: 0;
 }
 
+.loading {
+  -webkit-animation: transitionOutTop 0.5s;
+          animation: transitionOutTop 0.5s;
+}
+
 .navbar {
   background: var(--backround);
   color: var(--backround);
   display: grid;
-  grid-template-columns: 70% 30%;
-}
-
-.sideways-hero-div {
-  display: grid;
-  grid-template-columns: 20% 20%;
-  margin: 0;
-  padding: 0;
+  grid-template-columns: 70% 15% 15%;
 }
 
 .navbar-list {
@@ -128,7 +126,7 @@ body {
 }
 @-webkit-keyframes transitionInRight {
   0% {
-    transform: translateX(500%);
+    transform: translateX(400%);
   }
   100% {
     transform: translateX(0px);
@@ -136,7 +134,7 @@ body {
 }
 @keyframes transitionInRight {
   0% {
-    transform: translateX(500%);
+    transform: translateX(400%);
   }
   100% {
     transform: translateX(0px);
@@ -144,7 +142,7 @@ body {
 }
 @-webkit-keyframes transitionInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
   100% {
     transform: translateX(0px);
@@ -152,7 +150,7 @@ body {
 }
 @keyframes transitionInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
   100% {
     transform: translateX(0px);
@@ -163,7 +161,7 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(500%);
+    transform: translateX(400%);
   }
 }
 @keyframes transitionOutRight {
@@ -171,7 +169,7 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(500%);
+    transform: translateX(400%);
   }
 }
 @-webkit-keyframes transitionOutLeft {
@@ -179,7 +177,7 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
 @keyframes transitionOutLeft {
@@ -187,7 +185,23 @@ body {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
+  }
+}
+@-webkit-keyframes transitionOutTop {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+@keyframes transitionOutTop {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-150%);
   }
 }
 .sideways-hero {
