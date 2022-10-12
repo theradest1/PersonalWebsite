@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="title"><a href="/"><-</a>   Projects</div>
-	<nav class="hambar">
+	<nav class="hambar" ID="hambar">
 		<ul class="hambar-list">
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('blender', 'grid')">Blender 3D</a></li>
 			<li>Languages</li>
@@ -41,12 +41,18 @@
 
 	<script>
 		function toggleDiv(ID, displayType="block") {
-		  var x = document.getElementById("blender");
+		  var x = document.getElementById(ID);
 		  if (x.style.display === displayType) {
 			x.style.display = "none";
+			setGrid("hambar", "100% 0%");
 		  } else {
 			x.style.display = displayType;
+			setGrid("hambar", "60% 40%");
 		  }
+		}
+		function setGrid(ID, gridValues) {
+		  var x = document.getElementById(ID);
+		  x.style.gridTemplateColumns = gridValues;
 		}
 	</script>
 </body>

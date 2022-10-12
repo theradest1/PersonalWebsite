@@ -58,7 +58,7 @@ body {
 	background: var(--backround);
 
 	display: grid;
-	grid-template-columns: 70% 20%;
+	grid-template-columns: 100% 0%;
 	
 	.hambar-list {
 		li {
@@ -91,17 +91,9 @@ body {
 		li {
 			color: black;
 		}
+		transition: all 0.4s ease;
 	}
 	
-}
-
-@keyframes moveUp {
-	0% {
-		transform: translateY(0)
-	}
-	100% {
-		transform: translateY(-100px);
-	}
 }
 
 @keyframes wavy {

@@ -56,7 +56,7 @@ body {
 .hambar {
   background: var(--backround);
   display: grid;
-  grid-template-columns: 70% 20%;
+  grid-template-columns: 100% 0%;
 }
 .hambar .hambar-list li {
   list-style-type: none;
@@ -79,6 +79,7 @@ body {
 .skill-list-container div {
   display: none;
   grid-template-columns: 50% 30% 20%;
+  transition: all 0.4s ease;
 }
 .skill-list-container div ul {
   text-decoration: none;
@@ -88,23 +89,6 @@ body {
   color: black;
 }
 
-@-webkit-keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100px);
-  }
-}
-
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100px);
-  }
-}
 @-webkit-keyframes wavy {
   0%, 40%, 100% {
     transform: translateY(0);
@@ -113,6 +97,7 @@ body {
     transform: translateY(-10px);
   }
 }
+
 @keyframes wavy {
   0%, 40%, 100% {
     transform: translateY(0);
