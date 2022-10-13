@@ -4,24 +4,24 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>VAHS Engineering Club</title>
-	<link rel="stylesheet" href="/public/css/main.css">
+	<title>Skills</title>
+	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<div id="title" class="title"><li><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Skills</a></li></div>
+	<div id="loading" class="loading">Loading...</div>
+	<div id="title" class="title"><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Skills</a></div>
 	<nav class="hambar" id="hambar"> 
 		<ul class="hambar-list">
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('blender', 'grid', 'right')">Blender 3D</a></li>
-			<li>Languages</li>
-			<li>Misc</li>
-			<li>Game Creation</li>
-			<li>Hardware</li>
-			<li>Websites</li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('languages', 'grid', 'right')">Languages</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('game-creation', 'grid', 'right')">Game Creation</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('hardware', 'grid', 'right')">Hardware</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('web-dev', 'grid', 'right')">Web Development</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('misc', 'grid', 'right')">Misc</a></li>
 		</ul>
 
 		<container class="skill-list-container">
 			<div id="blender">
-				<div></div>
 				<ul class="skill-names">
 					<li>Modeling:</li>
 					<li>Animation:</li>
@@ -33,8 +33,7 @@
 					<li>3.5/5</li>
 				</ul>
 			</div>
-			<div class="languages">
-				<div></div>
+			<div id="languages">
 				<ul class="skill-names">
 					<li>Python:</li>
 					<li>C#:</li>
@@ -55,7 +54,6 @@
 				</ul>
 			</div>
 			<div id="game-creation">
-				<div></div>
 				<ul class="skill-names">
 					<li>Unity:</li>
 					<li>Unreal Engine 4:</li>
@@ -74,7 +72,6 @@
 				</ul>
 			</div>
 			<div id="hardware">
-				<div></div>
 				<ul class="skill-names">
 					<li>3D Printing:</li>
 					<li>Curcitry:</li>
@@ -91,7 +88,6 @@
 				</ul>
 			</div>
 			<div id="web-dev">
-				<div></div>
 				<ul class="skill-names">
 					<li>Frontend:</li>
 					<li>Backend:</li>
@@ -102,7 +98,6 @@
 				</ul>
 			</div>
 			<div id="misc">
-				<div></div>
 				<ul class="skill-names">
 					<li>Discord Bots:</li>
 					<li>Artificial Intelegence:</li>
@@ -114,38 +109,6 @@
 			</div>
 		</container>
 	</nav>
-
-	
-
-	<script>
-		function slideOut() {
-			document.getElementById("hambar").style.animation = "transitionOutLeft 1s"
-			document.getElementById("title").style.animation = "transitionOutLeft 1s"
-			setTimeout(() => {location.href = '/';}, 800);
-		}
-
-		function toggleDiv(ID, displayType="block", slide = "none") {
-		  var x = document.getElementById(ID);
-		  if (x.style.display === displayType) {
-			if (slide == "right") {
-				x.style.animation = "transitionOutRight .5s"
-			}
-			else if (slide == "left") {
-				x.style.animation = "transitionOutLeft .5s"
-			}
-
-			setTimeout(() => {x.style.display = "none";}, 500);
-		  } else {
-			if (slide == "right") {
-				x.style.animation = "transitionInRight .5s"
-			}
-			else if (slide == "left") {
-				x.style.animation = "transitionInLeft .5s"
-			}
-
-			x.style.display = displayType;
-		  }
-		}
-	</script>
+	<script src="/js/skills.js"></script>
 </body>
 </html>
