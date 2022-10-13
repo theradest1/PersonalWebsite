@@ -1,12 +1,12 @@
 setTimeout(() => {document.getElementById("loading").style.display = "none";}, 400);
 
 function slideOut() {
-	document.getElementById("hambar").style.animation = "transitionOutLeft 1.5s"
-	document.getElementById("title").style.animation = "transitionOutLeft 1.5s"
-	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 300);
-	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 300);
+	document.getElementById("hambar").style.animation = "transitionOutLeft 1.8s"
+	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
+	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);
+	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);
 	
-	setTimeout(() => {location.href = '/views/';}, 1200);
+	setTimeout(() => {location.href = '/views/';}, 1600);
 }
 
 function toggleDiv(ID, displayType="block", slide = "none") {

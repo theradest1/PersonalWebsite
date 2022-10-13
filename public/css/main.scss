@@ -164,7 +164,7 @@ body {
 }
 @keyframes flip {
 	0%,80% {
-	  transform: rotateY(360deg);
+	  transform: rotateX(360deg);
 	}
 }
 @keyframes jump {
@@ -181,6 +181,9 @@ body {
 		transform: translateX(400%);
 	}
 
+	80% {
+		transform: translateX(-15px);
+	}
 	100% {
 		transform: translateX(0px);
 	}
@@ -188,6 +191,10 @@ body {
 @keyframes transitionInLeft {
 	0% {
 		transform: translateX(-150%);
+	}
+
+	80% {
+		transform: translateX(15px);
 	}
 
 	100% {
@@ -199,6 +206,10 @@ body {
 		transform: translateX(0px);
 	}
 
+	20% {
+		transform: translateX(-15px);
+	}
+
 	100% {
 		transform: translateX(400%);
 	}
@@ -206,6 +217,10 @@ body {
 @keyframes transitionOutLeft {
 	0% {
 		transform: translateX(0px);
+	}
+
+	20% {
+		transform: translateX(15px);
 	}
 
 	100% {

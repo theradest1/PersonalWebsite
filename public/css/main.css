@@ -168,12 +168,12 @@ body {
 }
 @-webkit-keyframes flip {
   0%, 80% {
-    transform: rotateY(360deg);
+    transform: rotateX(360deg);
   }
 }
 @keyframes flip {
   0%, 80% {
-    transform: rotateY(360deg);
+    transform: rotateX(360deg);
   }
 }
 @-webkit-keyframes jump {
@@ -196,6 +196,9 @@ body {
   0% {
     transform: translateX(400%);
   }
+  80% {
+    transform: translateX(-15px);
+  }
   100% {
     transform: translateX(0px);
   }
@@ -203,6 +206,9 @@ body {
 @keyframes transitionInRight {
   0% {
     transform: translateX(400%);
+  }
+  80% {
+    transform: translateX(-15px);
   }
   100% {
     transform: translateX(0px);
@@ -212,6 +218,9 @@ body {
   0% {
     transform: translateX(-150%);
   }
+  80% {
+    transform: translateX(15px);
+  }
   100% {
     transform: translateX(0px);
   }
@@ -219,6 +228,9 @@ body {
 @keyframes transitionInLeft {
   0% {
     transform: translateX(-150%);
+  }
+  80% {
+    transform: translateX(15px);
   }
   100% {
     transform: translateX(0px);
@@ -228,6 +240,9 @@ body {
   0% {
     transform: translateX(0px);
   }
+  20% {
+    transform: translateX(-15px);
+  }
   100% {
     transform: translateX(400%);
   }
@@ -235,6 +250,9 @@ body {
 @keyframes transitionOutRight {
   0% {
     transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-15px);
   }
   100% {
     transform: translateX(400%);
@@ -244,6 +262,9 @@ body {
   0% {
     transform: translateX(0px);
   }
+  20% {
+    transform: translateX(15px);
+  }
   100% {
     transform: translateX(-150%);
   }
@@ -251,6 +272,9 @@ body {
 @keyframes transitionOutLeft {
   0% {
     transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(15px);
   }
   100% {
     transform: translateX(-150%);
