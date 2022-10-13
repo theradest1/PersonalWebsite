@@ -1,8 +1,8 @@
 :root {
   --backround: #716969;
+  --secondary: #474A2C;
   --margins: #090226;
-  --other1: #FFE45E;
-  --other2: #474A2C;
+  --other2: #FFE45E;
   --other3: #C2EFEB;
   --text: #000;
 }
@@ -27,7 +27,7 @@ body {
   background: var(--backround);
   color: var(--backround);
   display: grid;
-  grid-template-columns: 70% 15% 15%;
+  grid-template-columns: 64% 18% 18%;
 }
 
 .navbar-list {
@@ -35,6 +35,7 @@ body {
           animation: transitionInLeft 1s;
   margin-top: -1.8em;
   color: var(--backround);
+  margin-left: -2.5em;
 }
 .navbar-list li {
   padding: 0.5em 0;
@@ -66,7 +67,6 @@ body {
 }
 
 .hambar {
-  background: var(--backround);
   -webkit-animation: transitionInLeft 1s;
           animation: transitionInLeft 1s;
   display: grid;
@@ -79,6 +79,12 @@ body {
 .hambar .hambar-list {
   font-size: 2.3em;
 }
+.hambar .hambar-list li:hover {
+  font-weight: bold;
+  display: inline-block;
+  -webkit-animation: jump 0.4s;
+          animation: jump 0.4s;
+}
 .hambar li {
   list-style-type: none;
   padding: 0.5em 0;
@@ -87,12 +93,6 @@ body {
   text-decoration: none;
   color: var(--text);
   white-space: nowrap;
-}
-.hambar li:hover {
-  font-weight: bold;
-  display: inline-block;
-  -webkit-animation: jump 0.4s;
-          animation: jump 0.4s;
 }
 
 .skill-list-container div {
@@ -107,6 +107,11 @@ body {
   color: black;
   font-size: 2em;
 }
+.skill-list-container div li:hover {
+  display: inline-block;
+  -webkit-animation: wiggle 0.2s;
+          animation: wiggle 0.2s;
+}
 
 .sideways-hero {
   -ms-writing-mode: tb-rl;
@@ -114,7 +119,7 @@ body {
   text-orientation: mixed;
   font-weight: 900;
   font-family: Impact;
-  font-size: 5.5em;
+  font-size: 0.1;
   /*padding-right: .4em;
   padding-top: .1em;*/
   padding: 0;
@@ -124,6 +129,7 @@ body {
           animation: transitionInRight 1s;
 }
 .sideways-hero span {
+  font-size: 7em;
   display: inline-block;
   -webkit-animation: flip 7s infinite;
           animation: flip 7s infinite;
@@ -131,7 +137,35 @@ body {
           animation-delay: calc(0.3s * var(--i));
 }
 
+/*mobile things*/
+@media (max-width: 520px) {
+  .sideways-hero {
+    display: none;
+  }
+}
 /*Animations:*/
+@-webkit-keyframes wiggle {
+  0%, 100%, 50% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(2.5deg);
+  }
+  75% {
+    transform: rotateZ(-2.5deg);
+  }
+}
+@keyframes wiggle {
+  0%, 100%, 50% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(2.5deg);
+  }
+  75% {
+    transform: rotateZ(-2.5deg);
+  }
+}
 @-webkit-keyframes flip {
   0%, 80% {
     transform: rotateY(360deg);
