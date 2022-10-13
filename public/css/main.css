@@ -137,6 +137,12 @@ body {
           animation-delay: calc(0.3s * var(--i));
 }
 
+.school-description {
+  color: var(--text);
+  -webkit-animation: transitionInLeft 1s;
+          animation: transitionInLeft 1s;
+}
+
 /*mobile things*/
 @media (max-width: 520px) {
   .sideways-hero {

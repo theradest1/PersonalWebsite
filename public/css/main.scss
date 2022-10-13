@@ -141,6 +141,11 @@ body {
 	}
 }
 
+.school-description {
+	color: var(--text);
+	animation: transitionInLeft 1s;
+}
+
 /*mobile things*/
 @media (max-width:520px) {
 	.sideways-hero {
