@@ -143,6 +143,18 @@ body {
           animation: transitionInLeft 1s;
 }
 
+.projects-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+}
+.projects-container img {
+  padding: 5%;
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
 /*mobile things*/
 @media (max-width: 520px) {
   .sideways-hero {
@@ -291,7 +303,7 @@ body {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
 }
 @keyframes transitionOutTop {
@@ -299,7 +311,23 @@ body {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
+  }
+}
+@-webkit-keyframes transitionInTop {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes transitionInTop {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 @-webkit-keyframes transitionInBottom {
@@ -316,5 +344,21 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@-webkit-keyframes transitionOutBottom {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20em);
+  }
+}
+@keyframes transitionOutBottom {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20em);
   }
 }/*# sourceMappingURL=main.css.map */
