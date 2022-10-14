@@ -4,9 +4,10 @@ setTimeout(() => {slideIn();}, 400);
 
 function slideIn() {
 	for(let i = 1; i <= 8; i++) {
-		const img = document.getElementById("img" + i).style;
-		img.display = "block";
-		img.animation = "transitionInBottomFar " + (i/10 + .5) + "s";
+		const img = document.getElementById("img" + i);
+		img.style.display = "block";
+		img.src = "../public/img/image" + Math.floor(Math.random() * 9) + ".png"
+		img.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";
 	}
 }
 
@@ -14,10 +15,10 @@ function slideOut() {
 	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
 	
 	for(let i = 1; i <= 8; i++) {
-		const img = document.getElementById("img" + i).style;
+		const img = document.getElementById("img" + i);
 		//img.display = "block";
-		img.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
-		setTimeout(() => {img.display = "none";}, 800);
+		img.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
+		setTimeout(() => {img.style.display = "none";}, 800);
 	}
 
 	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);
@@ -30,5 +31,5 @@ async function changeImage(ID, direction, direction2) {
 	const dir = [direction, direction2][Math.floor(Math.random() * 2)];
 	const img = document.getElementById(ID)
 	img.style.animation = "transitionOut" + dir + " 1s";
-	setTimeout(() => {img.style.animation = "transitionIn" + dir + " 1s";}, 900);
+	setTimeout(() => {img.style.animation = "transitionIn" + dir + " 1s"; img.src = "../public/img/image" + Math.floor(Math.random() * 8) + ".png";}, 900);
 }
