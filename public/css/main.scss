@@ -152,7 +152,7 @@ body {
 	grid-template-rows: auto auto;
 	img {
 		padding: 5%;
-		display: block;
+		display: none;
   		margin: auto;
   		width: 70%;
 	}
@@ -249,6 +249,10 @@ body {
 		transform: translateY(0px);
 	}
 
+	20% {
+		transform: translateY(15px);
+	}
+
 	100% {
 		transform: translateY(-200%);
 	}
@@ -256,6 +260,10 @@ body {
 @keyframes transitionInTop {
 	0% {
 		transform: translateY(-200%);
+	}
+
+	80% {
+		transform: translateY(15px);
 	}
 
 	100% {
@@ -267,6 +275,10 @@ body {
 		transform: translateY(20em);
 	}
 
+	80% {
+		transform: translateY(-15px);
+	}
+
 	100% {
 		transform: translateY(0px);
 	}
@@ -276,7 +288,39 @@ body {
 		transform: translateY(0px);
 	}
 
+	20% {
+		transform: translateY(-15px);
+	}
+
 	100% {
 		transform: translateY(20em);
+	}
+}
+
+@keyframes transitionOutBottomFar {
+	0% {
+		transform: translateY(0px);
+	}
+
+	20% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(50em);
+	}
+}
+
+@keyframes transitionInBottomFar {
+	0% {
+		transform: translateY(50em);
+	}
+
+	80% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(0px);
 	}
 }
