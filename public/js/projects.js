@@ -20,10 +20,9 @@ function slideOut() {
 		img.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
 		setTimeout(() => {img.style.display = "none";}, 800);
 	}
-
-	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);
 	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);
-	
+	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottomMegaFar .8s";}, 800);	
+
 	setTimeout(() => {location.href = '/views/';}, 1600);
 }
 

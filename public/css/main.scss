@@ -131,7 +131,7 @@ body {
 	margin: 0;
 	color: #0000005f;
 
-	animation: transitionInRight 1s;
+	animation: transitionInRightFar 1s;
 
 	span {
 		font-size: 7em;
@@ -148,13 +148,18 @@ body {
 
 .projects-container {
 	display: grid;
-	grid-template-columns: auto auto auto auto;
-	grid-template-rows: auto auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 50% 50%;
+	a {
+		width: 80%;
+		height: 80%;
+	}
 	img {
 		padding: 5%;
 		display: none;
   		margin: auto;
-  		width: 70%;
+  		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -166,7 +171,8 @@ body {
 }
 
 
-/*Animations:*/
+/*Animations:
+Small things*/
 @keyframes wiggle {
 	0%, 100%, 50% {
 		transform: rotateZ(0deg)
@@ -193,27 +199,15 @@ body {
 	}
 }
 
+/*Transitions:*/
 @keyframes transitionInRight {
 	0% {
-		transform: translateX(400%);
+		transform: translateX(150%);
 	}
 
 	80% {
 		transform: translateX(-15px);
 	}
-	100% {
-		transform: translateX(0px);
-	}
-}
-@keyframes transitionInLeft {
-	0% {
-		transform: translateX(-150%);
-	}
-
-	80% {
-		transform: translateX(15px);
-	}
-
 	100% {
 		transform: translateX(0px);
 	}
@@ -228,7 +222,46 @@ body {
 	}
 
 	100% {
+		transform: translateX(150%);
+	}
+}
+@keyframes transitionOutRightFar {
+	0% {
+		transform: translateX(0px);
+	}
+
+	20% {
+		transform: translateX(-15px);
+	}
+
+	100% {
 		transform: translateX(400%);
+	}
+}
+@keyframes transitionInRightFar {
+	0% {
+		transform: translateX(400%);
+	}
+
+	80% {
+		transform: translateX(-15px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes transitionInLeft {
+	0% {
+		transform: translateX(-150%);
+	}
+
+	80% {
+		transform: translateX(15px);
+	}
+
+	100% {
+		transform: translateX(0px);
 	}
 }
 @keyframes transitionOutLeft {
@@ -244,6 +277,7 @@ body {
 		transform: translateX(-150%);
 	}
 }
+
 @keyframes transitionOutTop {
 	0% {
 		transform: translateY(0px);
@@ -254,12 +288,12 @@ body {
 	}
 
 	100% {
-		transform: translateY(-200%);
+		transform: translateY(-150%);
 	}
 }
 @keyframes transitionInTop {
 	0% {
-		transform: translateY(-200%);
+		transform: translateY(-150%);
 	}
 
 	80% {
@@ -270,9 +304,23 @@ body {
 		transform: translateY(0px);
 	}
 }
+
 @keyframes transitionInBottom {
 	0% {
 		transform: translateY(20em);
+	}
+
+	80% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes transitionInBottomMegaFar {
+	0% {
+		transform: translateY(30em);
 	}
 
 	80% {
@@ -293,10 +341,9 @@ body {
 	}
 
 	100% {
-		transform: translateY(20em);
+		transform: translateY(150%);
 	}
 }
-
 @keyframes transitionOutBottomFar {
 	0% {
 		transform: translateY(0px);
@@ -307,13 +354,12 @@ body {
 	}
 
 	100% {
-		transform: translateY(50em);
+		transform: translateY(300%);
 	}
 }
-
 @keyframes transitionInBottomFar {
 	0% {
-		transform: translateY(50em);
+		transform: translateY(300%);
 	}
 
 	80% {
