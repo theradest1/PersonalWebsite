@@ -148,16 +148,50 @@ body {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 50% 50%;
 }
+.projects-container div {
+  position: relative;
+  display: none;
+}
+.projects-container .projectImg {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+.projects-container .projectImg img {
+  width: inherit;
+  height: inherit;
+  scale: 1;
+  transition: all 0.2s;
+}
+.projects-container .projectImg img:hover {
+  scale: 1.05;
+}
+.projects-container .projectFocusButton {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  bottom: 15.5%;
+  right: 15.5%;
+}
+.projects-container .projectFocusButton img {
+  background: gray;
+  opacity: 50%;
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+}
+.projects-container .projectFocusButton img:hover {
+  opacity: 100%;
+  background: rgb(78, 78, 78);
+}
 .projects-container a {
   width: 80%;
   height: 80%;
 }
 .projects-container img {
   padding: 5%;
-  display: none;
   margin: auto;
-  width: 100%;
-  height: 100%;
 }
 
 /*mobile things*/

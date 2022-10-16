@@ -150,16 +150,52 @@ body {
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 50% 50%;
+	div {
+		position: relative;
+		display: none;
+	}
+	.projectImg {
+		position: relative;
+		width: 80%;
+		height: 80%;
+		img {
+			width: inherit;
+			height: inherit;
+			scale: 1;
+			transition: all .2s;
+			&:hover {
+				scale: 1.05;
+			}
+		}
+	}
+	.projectFocusButton {
+		position: absolute;
+		width: 10%;
+		height: 10%;
+		bottom: 15.5%;
+		right: 15.5%;
+		img {
+			background: gray;
+			opacity: 50%;
+			border-radius: 5%;
+			width: 100%;
+			height: 100%;
+			transition: all .2s;
+			&:hover {
+				opacity: 100%;
+				background: rgb(78, 78, 78);
+			}
+		}
+		
+	}
+
 	a {
 		width: 80%;
 		height: 80%;
 	}
 	img {
 		padding: 5%;
-		display: none;
   		margin: auto;
-  		width: 100%;
-		height: 100%;
 	}
 }
 

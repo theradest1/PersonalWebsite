@@ -9,9 +9,14 @@ function slideIn() {
 		const img = document.getElementById("img" + i);
 		img.src = "../public/img/image" + num + ".png"
 
-		setTimeout(() => {img.style.display = "block"; img.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";}, 400);
+		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";}, 400);
 		
 	}
+}
+
+function focusProject(projectNum) {
+	const projectID = parseInt(document.getElementById("img" + projectNum).src.substring(38, 45));
+	console.log("focus to project number " + projectID);
 }
 
 function getNewProjectID(oldID = -1) {
@@ -20,19 +25,18 @@ function getNewProjectID(oldID = -1) {
 	if(oldID != -1) {
 		availableProjects.push(oldID);
 	}
-	console.log(availableProjects);
 	return num;
 }
 
 function slideOut() {
-	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
+	document.getElementById("title").parentElement.parentElement.style.animation = "transitionOutLeft 1.8s"
 	
 	
 	for(let i = 1; i <= 8; i++) {
 		const img = document.getElementById("img" + i);
 		//img.display = "block";
-		img.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
-		setTimeout(() => {img.style.display = "none";}, 800);
+		img.parentElement.parentElement.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
+		setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
 	}
 	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);
 	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottomMegaFar .8s";}, 800);	
@@ -46,11 +50,10 @@ async function changeImage(ID, direction, direction2) {
 	img.parentElement.onclick = "";
 	const dir = [direction, direction2][Math.floor(Math.random() * 2)];
 
-	img.style.animation = "transitionOut" + dir + " 1s";
+	img.parentElement.parentElement.style.animation = "transitionOut" + dir + " 1s";
 
 	const pastImg = parseInt(img.src.substring(38, 45));
-	console.log(img.src.substring(38, 45));
 	const num = getNewProjectID(pastImg);
-	setTimeout(() => {img.style.animation = "transitionIn" + dir + " 1s"; img.src = "../public/img/image" + num + ".png";}, 900);
+	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = "../public/img/image" + num + ".png";}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
 }
