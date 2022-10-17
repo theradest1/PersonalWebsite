@@ -1,11 +1,13 @@
+//var fs = require('fs'); 
+
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 
-let availableProjects = [0,1,2,3,4,5,6,7,8];
+let availableProjects = [1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 windowResize();
 
 function windowResize(){
 	var container = document.getElementById("projects-container");
-	container.style.height = (window.innerHeight - 80) + "px";
+	container.style.height = (window.innerHeight*.88) + "px";
 	if(window.innerWidth < window.innerHeight) { 
 		container.style.gridTemplateColumns = "50% 50%";
 		container.style.gridTemplateRows = "33% 33% 33%";
@@ -14,6 +16,20 @@ function windowResize(){
 		container.style.gridTemplateColumns = "33% 33% 33%";
 		container.style.gridTemplateRows = "50% 50%";
 	}
+}
+
+function getGridPosition(index) {
+	const gridEl = document.getElementById("projects-container");
+	let offset = Number(window.getComputedStyle(gridEl.children[0]).gridColumnStart) - 1; 
+	if (isNaN(offset)) {
+	  offset = 0;
+	}
+	
+	const colCount = window.getComputedStyle(gridEl).gridTemplateColumns.split(" ").length;
+	const rowPosition = Math.floor((index + offset) / colCount);
+	const colPosition = (index + offset) % colCount;
+
+	return { row: rowPosition, column: colPosition };
 }
 
 function slideIn() {
@@ -57,16 +73,28 @@ function slideOut() {
 	setTimeout(() => {location.href = '/views/';}, 1600);
 }
 
-async function changeImage(ID, direction, direction2) {
+async function changeImage(ID, direction, direction2, direction3, direction4) {
 	const img = document.getElementById(ID)
 	const link = img.parentElement.onclick;
 	img.parentElement.onclick = "";
-	const dir = [direction, direction2][Math.floor(Math.random() * 2)];
+	let dir = "";
+
+	if(document.getElementById("projects-container").style.gridTemplateColumns != "50% 50%") {
+		dir = [direction, direction2][Math.floor(Math.random() * 2)];
+	} else {
+		dir = [direction3, direction4][Math.floor(Math.random() * 2)];
+	}
 
 	img.parentElement.parentElement.style.animation = "transitionOut" + dir + " 1s";
 
-	const pastImg = parseInt(img.src.substring(38, 45));
-	const num = getNewProjectID(pastImg);
+	const pastProject = parseInt(img.src.substring(38, 45));
+	const num = getNewProjectID(pastProject);
+	unpackProjectFile(num);
 	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = "../public/img/image" + num + ".png";}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
+}
+
+function unpackProjectFile(ID) {
+	console.out(ID);
+	//console.out(fs.readFile("../public/files/project" + ID + ".txt"));
 }
