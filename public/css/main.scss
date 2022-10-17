@@ -150,14 +150,18 @@ body {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: auto auto;
+	max-width: 100%;
 	div {
 		position: relative;
 		display: none;
+		max-width: 100%;
+		max-height: 100%;
 	}
 	.projectImg {
 		position: relative;
-		width: 80%;
-		height: 80%;
+		width: 90%;
+		height: 90%;
+
 		img {
 			width: inherit;
 			height: inherit;
@@ -172,12 +176,11 @@ body {
 		position: absolute;
 		width: 10%;
 		height: 10%;
-		bottom: 15.5%;
-		right: 15.5%;
+		bottom: 3.8%;
+		right: 6%;
 		img {
 			background: gray;
 			opacity: 50%;
-			border-radius: 5%;
 			width: 100%;
 			height: 100%;
 			transition: all .2s;

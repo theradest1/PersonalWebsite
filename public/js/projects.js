@@ -4,13 +4,13 @@ let availableProjects = [0,1,2,3,4,5,6,7,8];
 windowResize();
 
 function windowResize(){
-	if(window.innerWidth < window.innerHeight) {
-		const container = document.getElementById("projects-container");
+	var container = document.getElementById("projects-container");
+	container.style.height = (window.innerHeight - 80) + "px";
+	if(window.innerWidth < window.innerHeight) { 
 		container.style.gridTemplateColumns = "50% 50%";
 		container.style.gridTemplateRows = "33% 33% 33%";
 	}
 	else {
-		const container = document.getElementById("projects-container");
 		container.style.gridTemplateColumns = "33% 33% 33%";
 		container.style.gridTemplateRows = "50% 50%";
 	}
