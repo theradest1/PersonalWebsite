@@ -89,12 +89,22 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 
 	const pastProject = parseInt(img.src.substring(38, 45));
 	const num = getNewProjectID(pastProject);
-	unpackProjectFile(num);
-	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = "../public/img/image" + num + ".png";}, 900);
+	const info = returnThing(["../public/img/image1.png", "A soccer ball lolz"]);
+	console.log("File Contents: " + info);
+	console.log(info);
+	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = info[0];}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
 }
 
-function unpackProjectFile(ID) {
-	console.out(ID);
-	//console.out(fs.readFile("../public/files/project" + ID + ".txt"));
+function returnThing(thing) {
+	return thing;
+}
+
+async function unpackProjectFile(ID) {
+	console.log(ID);
+	let file = await fetch("../public/files/project1.txt");
+	let text = await file.text();
+	let lines = text.split("\n");
+	
+	return lines
 }
