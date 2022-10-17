@@ -45,8 +45,8 @@ body {
 			text-decoration: none;
 			color: var(--text);
 			&:hover {
-				font-weight: bold;
 				display: inline-block;
+				font-weight: bold;
 				animation: jump .4s;
 			}
 		}

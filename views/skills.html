@@ -12,16 +12,16 @@
 	<div id="loading" class="loading">Loading...</div>
 	<div id="title" class="title"><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Skills</a></div>
 	<nav class="hambar" id="hambar"> 
-		<ul class="hambar-list">
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('blender', 'grid', 'right')">Blender 3D</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('languages', 'grid', 'right')">Languages</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('game-creation', 'grid', 'right')">Game Creation</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('hardware', 'grid', 'right')">Hardware</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('web-dev', 'grid', 'right')">Web Development</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="toggleDiv('misc', 'grid', 'right')">Misc</a></li>
+		<ul class="hambar-list" id="hambar-list">
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('blender', 'grid')">Blender 3D</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('languages', 'grid')">Languages</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('game-creation', 'grid')">Game Creation</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('hardware', 'grid')">Hardware</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('web-dev', 'grid')">Web Development</a></li>
+			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('misc', 'grid')">Misc</a></li>
 		</ul>
 
-		<container class="skill-list-container">
+		<container class="skill-list-container" id="skill-list-container">
 			<div id="blender">
 				<ul class="skill-names">
 					<li>Modeling:</li>

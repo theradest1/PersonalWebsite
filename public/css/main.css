@@ -48,8 +48,8 @@ body {
   color: var(--text);
 }
 .navbar-list li a:hover {
-  font-weight: bold;
   display: inline-block;
+  font-weight: bold;
   -webkit-animation: jump 0.4s;
           animation: jump 0.4s;
 }
