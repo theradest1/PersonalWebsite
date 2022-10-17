@@ -1,10 +1,23 @@
-setTimeout(() => {document.getElementById("loading").style.display = "none";}, 400);
-setTimeout(() => {slideIn();}, 400);
+setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 
 let availableProjects = [0,1,2,3,4,5,6,7,8];
+windowResize();
+
+function windowResize(){
+	if(window.innerWidth < window.innerHeight) {
+		const container = document.getElementById("projects-container");
+		container.style.gridTemplateColumns = "50% 50%";
+		container.style.gridTemplateRows = "33% 33% 33%";
+	}
+	else {
+		const container = document.getElementById("projects-container");
+		container.style.gridTemplateColumns = "33% 33% 33%";
+		container.style.gridTemplateRows = "50% 50%";
+	}
+}
 
 function slideIn() {
-	for(let i = 1; i <= 8; i++) {
+	for(let i = 1; i <= 6; i++) {
 		const num = getNewProjectID();
 		const img = document.getElementById("img" + i);
 		img.src = "../public/img/image" + num + ".png"
@@ -29,10 +42,10 @@ function getNewProjectID(oldID = -1) {
 }
 
 function slideOut() {
-	document.getElementById("title").parentElement.parentElement.style.animation = "transitionOutLeft 1.8s"
+	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
 	
 	
-	for(let i = 1; i <= 8; i++) {
+	for(let i = 1; i <= 6; i++) {
 		const img = document.getElementById("img" + i);
 		//img.display = "block";
 		img.parentElement.parentElement.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
