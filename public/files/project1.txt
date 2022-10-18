@@ -1,2 +1,2 @@
-../public/img/image1.png
-soccer ball
+../public/img/projects/image1.png
+soccer ball that has kind of weird lighting - not sure why

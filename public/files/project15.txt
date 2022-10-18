@@ -1,0 +1,2 @@
+../public/img/projects/image15.jpg
+A 3d scan of my teacher's head that I 3d printed

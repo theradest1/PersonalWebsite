@@ -157,12 +157,15 @@ body {
 }
 .projects-container .projectImg {
   position: relative;
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
 }
 .projects-container .projectImg img {
-  width: inherit;
-  height: inherit;
+  color: red;
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 80%;
   scale: 1;
   transition: all 0.2s;
 }

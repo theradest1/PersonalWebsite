@@ -32,11 +32,12 @@ function getGridPosition(index) {
 	return { row: rowPosition, column: colPosition };
 }
 
-function slideIn() {
+async function slideIn() {
 	for(let i = 1; i <= 6; i++) {
 		const num = getNewProjectID();
 		const img = document.getElementById("img" + i);
-		img.src = "../public/img/image" + num + ".png"
+		const info = await unpackProjectFile(num);
+		img.src = info[0];
 
 		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";}, 400);
 		
@@ -89,20 +90,15 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 
 	const pastProject = parseInt(img.src.substring(38, 45));
 	const num = getNewProjectID(pastProject);
-	const info = returnThing(["../public/img/image1.png", "A soccer ball lolz"]);
+	const info = await unpackProjectFile(num);
 	console.log("File Contents: " + info);
-	console.log(info);
 	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = info[0];}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
 }
 
-function returnThing(thing) {
-	return thing;
-}
-
 async function unpackProjectFile(ID) {
 	console.log(ID);
-	let file = await fetch("../public/files/project1.txt");
+	let file = await fetch("../public/files/project" + ID + ".txt");
 	let text = await file.text();
 	let lines = text.split("\n");
 	

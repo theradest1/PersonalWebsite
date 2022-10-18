@@ -1,0 +1,2 @@
+../public/img/projects/image14.gif
+My first attempt at putting together animation and modeling in blender
