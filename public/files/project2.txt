@@ -1,2 +1,2 @@
-../public/img/projects/image2.gif
+/img/projects/image2.gif
 walking through water

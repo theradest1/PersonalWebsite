@@ -1,2 +1,2 @@
-../public/img/projects/image5.png
+/img/projects/image5.png
 Donut and coffe made from tutorial

@@ -1,2 +1,2 @@
-../public/img/projects/image7.gif
+/img/projects/image7.gif
 A repeating desert gif

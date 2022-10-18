@@ -1,2 +1,2 @@
-../public/img/projects/image6.png
+/img/projects/image6.png
 Sword made for my sister

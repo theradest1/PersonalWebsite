@@ -1,2 +1,2 @@
-../public/img/projects/image9.gif
+/img/projects/image9.gif
 Later stage of my universal multiplayer plugin for unity

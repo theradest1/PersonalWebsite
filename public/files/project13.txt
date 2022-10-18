@@ -1,2 +1,2 @@
-../public/img/projects/image13.gif
+/img/projects/image13.gif
 A car render (sorry for watermark)

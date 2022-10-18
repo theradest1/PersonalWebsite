@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<!--replace "/img" with "../public/img", then add it to line 9, 10, and 47-->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Projects</title>
-	<link rel="stylesheet" href="../public/css/main.css">
-	<link rel="stylesheet" href="../public/css/keyframes.css">
-	<link rel="icon" href="../public/img/favicon.ico">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/keyframes.css">
+	<link rel="icon" href="/img/favicon.ico">
 </head>
 <body onresize="windowResize()"> 
 	<div id="loading" class="loading">Loading...</div>
@@ -19,30 +20,30 @@
 	
 	<container class="projects-container" id="projects-container">
 		<div>
-			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img1', 'Left', 'Left', 'Left', 'Left')"><img id="img1" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(1, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img1', 'Left', 'Left', 'Left', 'Left')"><img id="img1" src="/img/image0.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(1, true)"><img id="img1Focus" src="/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
-			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img2', 'Top', 'Top', 'Top', 'Right')"><img id="img2" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(2, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img2', 'Top', 'Top', 'Top', 'Right')"><img id="img2" src="/img/image0.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(2, true)"><img id="img1Focus" src="/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
-			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img3', 'Top', 'Right', 'Left', 'Left')"><img id="img3" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(3, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img3', 'Top', 'Right', 'Left', 'Left')"><img id="img3" src="/img/image0.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(3, true)"><img id="img1Focus" src="/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
-			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img4', 'Bottom', 'Left', 'Right', 'Right')"><img id="img4" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(4, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img4', 'Bottom', 'Left', 'Right', 'Right')"><img id="img4" src="/img/image0.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(4, true)"><img id="img1Focus" src="/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
-			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img5', 'Bottom', 'Bottom', 'Left', 'Bottom')"><img id="img5" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(5, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img5', 'Bottom', 'Bottom', 'Left', 'Bottom')"><img id="img5" src="/img/image0.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(5, true)"><img id="img1Focus" src="/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
-			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img6', 'Bottom', 'Right', 'Right', 'Bottom')"><img id="img6" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(6, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img6', 'Bottom', 'Right', 'Right', 'Bottom')"><img id="img6" src="/img/image0.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(6, true)"><img id="img1Focus" src="/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 	</container>
-	<script src="../public/js/projects.js"></script>
+	<script src="/js/projects.js"></script>
 </body>
 </html>

@@ -1,2 +1,2 @@
-../public/img/projects/image3.gif
+/img/projects/image3.gif
 Softbody simulation to look like jello

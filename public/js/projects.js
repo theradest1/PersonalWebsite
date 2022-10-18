@@ -1,5 +1,9 @@
 //var fs = require('fs'); 
 
+var preFiles = "";//../public";
+var baseDir = "/";///views/";
+var distanceToID = 40;//47;
+
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 document.getElementById("unfocusProject").style.display = "none";
 
@@ -38,7 +42,7 @@ async function slideIn() {
 		const num = getNewProjectID();
 		const img = document.getElementById("img" + i);
 		const info = await unpackProjectFile(num);
-		img.src = info[0];
+		img.src = preFiles + info[0];
 
 		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";}, 400);
 		
@@ -57,7 +61,8 @@ async function setProjectInfo(ID) {
 
 async function focusProject(projectNum, open = false) {
 	if(open) {
-		var projectID = parseInt(document.getElementById("img" + projectNum).src.substring(47, 54));
+		var projectID = parseInt(document.getElementById("img" + projectNum).src.substring(distanceToID, distanceToID + 4));
+		console.log(document.getElementById("img" + projectNum).src);
 		console.log("focus to project number " + projectID);
 
 		//hide everything
@@ -134,7 +139,7 @@ function slideOut() {
 	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);
 	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottomMegaFar .8s";}, 800);	
 
-	setTimeout(() => {location.href = '/views/';}, 1600);
+	setTimeout(() => {location.href = baseDir;}, 1600);
 }
 
 async function changeImage(ID, direction, direction2, direction3, direction4) {
@@ -151,15 +156,15 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 
 	img.parentElement.parentElement.style.animation = "transitionOut" + dir + " 1s";
 
-	const pastProject = parseInt(img.src.substring(47, 54));
+	const pastProject = parseInt(img.src.substring(distanceToID, distanceToID + 4));
 	const num = getNewProjectID(pastProject);
 	const info = await unpackProjectFile(num);
-	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = info[0];}, 900);
+	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = preFiles + info[0];}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
 }
 
 async function unpackProjectFile(ID) {
-	let file = await fetch("../public/files/project" + ID + ".txt");
+	let file = await fetch(preFiles + "/files/project" + ID + ".txt");
 	let text = await file.text();
 	let lines = text.split("\n");
 	

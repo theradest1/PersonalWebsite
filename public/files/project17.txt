@@ -1,2 +1,2 @@
-../public/img/projects/image17.gif
+/img/projects/image17.gif
 A water simulation in blender that became weird and corrupted at the end - not sure why

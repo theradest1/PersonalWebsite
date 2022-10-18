@@ -1,2 +1,2 @@
-../public/img/projects/image8.png
+/img/projects/image8.png
 Me starting with hair particles in blender

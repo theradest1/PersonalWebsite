@@ -1,2 +1,2 @@
-../public/img/projects/image12.gif
+/img/projects/image12.gif
 First unity game made from a tutorial

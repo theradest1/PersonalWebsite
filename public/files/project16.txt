@@ -1,2 +1,2 @@
-../public/img/projects/image16.jpg
+/img/projects/image16.jpg
 A part that I printed on my school's 3d printers to fix my 3d printer's belt for the baseplate
