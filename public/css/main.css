@@ -200,6 +200,11 @@ body {
   margin: auto;
 }
 
+.projectInfo {
+  color: black;
+  display: none;
+}
+
 /*mobile things*/
 @media (max-width: 520px) {
   .sideways-hero {

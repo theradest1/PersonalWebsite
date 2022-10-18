@@ -151,7 +151,7 @@ Small things*/
 }
 @keyframes transitionInBottomMegaFar {
 	0% {
-		transform: translateY(30em);
+		transform: translateY(50em);
 	}
 
 	80% {
@@ -160,6 +160,19 @@ Small things*/
 
 	100% {
 		transform: translateY(0px);
+	}
+}
+@keyframes transitionOutBottomMegaFar {
+	0% {
+		transform: translateY(0px);
+	}
+
+	20% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(50em);
 	}
 }
 @keyframes transitionOutBottom {

@@ -12,30 +12,34 @@
 <body onresize="windowResize()"> 
 	<div id="loading" class="loading">Loading...</div>
 	<div id="title" class="title"><a href="javascript:void(0);" onclick="slideOut()"><- Projects</a></div>
+
+	<div id="unfocusProject" class="title"><a href="javascript:void(0);" onclick="focusProject(0, false)"><- Back</a></div>
+	<div class="projectInfo" id="projectInfo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas debitis eos eligendi nobis, ex non sit fugiat alias vel quo! Iste error consectetur unde ut provident animi est rem culpa?</div>
+	
 	<container class="projects-container" id="projects-container">
 		<div>
 			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img1', 'Left', 'Left', 'Left', 'Left')"><img id="img1" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(1)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(1, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
 			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img2', 'Top', 'Top', 'Top', 'Right')"><img id="img2" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(2)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(2, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
 			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img3', 'Top', 'Right', 'Left', 'Left')"><img id="img3" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(3)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(3, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
 			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img4', 'Bottom', 'Left', 'Right', 'Right')"><img id="img4" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(4)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(4, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
 			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img5', 'Bottom', 'Bottom', 'Left', 'Bottom')"><img id="img5" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(5)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(5, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 		<div>
 			<a href="javascript:void(0);" class="projectImg" onclick="changeImage('img6', 'Bottom', 'Right', 'Right', 'Bottom')"><img id="img6" src="../public/img/image0.png" alt="img" width = auto height = auto></a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(6)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
+			<a href="javascript:void(0);" class="projectFocusButton" onclick="focusProject(6, true)"><img id="img1Focus" src="../public/img/plus.png" alt="img" width = auto height = auto></a>
 		</div>
 	</container>
 	<script src="../public/js/projects.js"></script>

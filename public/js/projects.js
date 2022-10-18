@@ -1,6 +1,7 @@
 //var fs = require('fs'); 
 
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
+document.getElementById("unfocusProject").style.display = "none";
 
 let availableProjects = [1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 windowResize();
@@ -44,9 +45,59 @@ async function slideIn() {
 	}
 }
 
-function focusProject(projectNum) {
-	const projectID = parseInt(document.getElementById("img" + projectNum).src.substring(38, 45));
-	console.log("focus to project number " + projectID);
+async function setProjectInfo(ID) {
+	console.log(ID);
+	const info = await unpackProjectFile(ID);
+	console.log(info);
+	document.getElementById("projectInfo").innerHTML = info[1];
+}
+
+async function focusProject(projectNum, open = false) {
+	if(open) {
+		var projectID = parseInt(document.getElementById("img" + projectNum).src.substring(47, 54));
+		console.log("focus to project number " + projectID);
+
+		//hide everything
+		document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
+		setTimeout(() => {document.getElementById("title").style.display = "none";}, 600);
+
+		for(let i = 1; i <= 6; i++) {
+			const img = document.getElementById("img" + i);
+			img.parentElement.parentElement.style.animation = "transitionOutBottomMegaFar " + ((6 - i)/10 + .8) + "s";
+			setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
+		}
+		//show project info
+		setTimeout(() => {
+			document.getElementById("unfocusProject").style.animation = "transitionInLeft 1.8s";
+			document.getElementById("unfocusProject").style.display = "block";
+
+			setProjectInfo(projectID);
+			
+			document.getElementById("projectInfo").style.animation = "transitionInBottomMegaFar 1s";
+			document.getElementById("projectInfo").style.display = "block"
+		}, 1200)	
+	} else {
+		//hide everything
+		document.getElementById("unfocusProject").style.animation = "transitionOutLeft 1.8s"
+		setTimeout(() => {document.getElementById("unfocusProject").style.display = "none";}, 600);
+
+		document.getElementById("projectInfo").style.animation = "transitionOutBottomMegaFar 1s";
+		
+		//show project info
+		setTimeout(() => {
+			document.getElementById("title").style.animation = "transitionInLeft 1.8s";
+			document.getElementById("title").style.display = "block";
+
+			document.getElementById("projectInfo").style.display = "none";
+
+			for(let i = 1; i <= 6; i++) {
+				const img = document.getElementById("img" + i);
+				img.parentElement.parentElement.style.animation = "transitionInBottomFar " + ((6 - (6 - i))/10 + .8) + "s";
+				setTimeout(() => {img.parentElement.parentElement.style.display = "block";}, 800);
+			}
+		}, 1000)
+	}
+	
 }
 
 function getNewProjectID(oldID = -1) {
