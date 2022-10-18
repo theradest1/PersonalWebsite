@@ -177,8 +177,8 @@ body {
   position: absolute;
   width: 10%;
   height: 10%;
-  bottom: 3%;
-  right: 3%;
+  bottom: 5px;
+  right: 4px;
 }
 .projects-container .projectFocusButton img {
   background: gray;
