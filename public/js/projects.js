@@ -46,10 +46,13 @@ async function slideIn() {
 }
 
 async function setProjectInfo(ID) {
-	console.log(ID);
 	const info = await unpackProjectFile(ID);
 	console.log(info);
-	document.getElementById("projectInfo").innerHTML = info[1];
+	var finalHTML = "";
+	for(let i = 1; i < info.length; i++) {
+		finalHTML += info[i];
+	}
+	document.getElementById("projectInfo").innerHTML = finalHTML;
 }
 
 async function focusProject(projectNum, open = false) {

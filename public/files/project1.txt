@@ -1,2 +1,5 @@
 ../public/img/projects/image1.png
-soccer ball that has kind of weird lighting - not sure why
+<img id="img1" src="../public/img/projects/image1.png" alt="img" width = 40% height = auto> 
+A soccer ball that has kind of weird lighting - not sure why
+test1 (;
+and a test 2 :p
