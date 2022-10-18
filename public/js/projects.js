@@ -64,7 +64,6 @@ function slideOut() {
 	
 	for(let i = 1; i <= 6; i++) {
 		const img = document.getElementById("img" + i);
-		//img.display = "block";
 		img.parentElement.parentElement.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
 		setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
 	}
@@ -91,13 +90,11 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 	const pastProject = parseInt(img.src.substring(38, 45));
 	const num = getNewProjectID(pastProject);
 	const info = await unpackProjectFile(num);
-	console.log("File Contents: " + info);
 	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = info[0];}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
 }
 
 async function unpackProjectFile(ID) {
-	console.log(ID);
 	let file = await fetch("../public/files/project" + ID + ".txt");
 	let text = await file.text();
 	let lines = text.split("\n");

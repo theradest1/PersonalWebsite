@@ -154,18 +154,19 @@ body {
   display: none;
   max-width: 100%;
   max-height: 100%;
+  margin: 3%;
+  background: rgb(78, 78, 78);
 }
 .projects-container .projectImg {
   position: relative;
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
 }
 .projects-container .projectImg img {
-  color: red;
   width: auto;
   height: auto;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 85%;
+  max-height: 85%;
   scale: 1;
   transition: all 0.2s;
 }
@@ -176,8 +177,8 @@ body {
   position: absolute;
   width: 10%;
   height: 10%;
-  bottom: 3.8%;
-  right: 6%;
+  bottom: 3%;
+  right: 3%;
 }
 .projects-container .projectFocusButton img {
   background: gray;
@@ -188,7 +189,7 @@ body {
 }
 .projects-container .projectFocusButton img:hover {
   opacity: 100%;
-  background: rgb(78, 78, 78);
+  background: rgb(46, 46, 46);
 }
 .projects-container a {
   width: 80%;
