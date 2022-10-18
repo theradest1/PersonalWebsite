@@ -50,7 +50,7 @@ async function setProjectInfo(ID) {
 	console.log(info);
 	var finalHTML = "";
 	for(let i = 1; i < info.length; i++) {
-		finalHTML += info[i];
+		finalHTML += "<br />" + info[i];
 	}
 	document.getElementById("projectInfo").innerHTML = finalHTML;
 }
