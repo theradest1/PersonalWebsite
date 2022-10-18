@@ -53,10 +53,7 @@ function getNewProjectID(oldID = -1) {
 	const num = availableProjects[Math.floor(Math.random() * availableProjects.length)];
 	availableProjects.splice(availableProjects.indexOf(num), 1);
 	if(oldID != -1) {
-		console.log(availableProjects)
 		availableProjects.push(oldID);
-		console.log(oldID);
-		console.log(availableProjects);
 	}
 	return num;
 }
@@ -91,9 +88,7 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 	img.parentElement.parentElement.style.animation = "transitionOut" + dir + " 1s";
 
 	const pastProject = parseInt(img.src.substring(47, 54));
-	console.log(img.src.substring(47, 54));
 	const num = getNewProjectID(pastProject);
-	console.log(num);
 	const info = await unpackProjectFile(num);
 	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s"; img.src = info[0];}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
