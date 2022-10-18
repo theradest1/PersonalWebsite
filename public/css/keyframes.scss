@@ -108,6 +108,32 @@ Small things*/
 		transform: translateX(-150%);
 	}
 }
+@keyframes transitionInLeftFar {
+	0% {
+		transform: translateX(-300%);
+	}
+
+	80% {
+		transform: translateX(15px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+@keyframes transitionOutLeftFar {
+	0% {
+		transform: translateX(0px);
+	}
+
+	20% {
+		transform: translateX(15px);
+	}
+
+	100% {
+		transform: translateX(-300%);
+	}
+}
 
 @keyframes transitionOutTop {
 	0% {

@@ -66,19 +66,23 @@ async function focusProject(projectNum, open = false) {
 
 		for(let i = 1; i <= 6; i++) {
 			const img = document.getElementById("img" + i);
-			img.parentElement.parentElement.style.animation = "transitionOutBottomMegaFar " + ((6 - i)/10 + .8) + "s";
+			if((i == 1 || i == 2 || i == 4) && window.innerWidth > window.innerHeight || (i == 3 || i == 5 || i == 6) && window.innerWidth < window.innerHeight) {
+				img.parentElement.parentElement.style.animation = "transitionOutLeftFar 1s";
+			}else {
+				img.parentElement.parentElement.style.animation = "transitionOutRightFar 1s";
+			}
 			setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
 		}
 		//show project info
 		setTimeout(() => {
-			document.getElementById("unfocusProject").style.animation = "transitionInLeft 1.8s";
+			document.getElementById("unfocusProject").style.animation = "transitionInLeft 1.4s";
 			document.getElementById("unfocusProject").style.display = "block";
 
 			setProjectInfo(projectID);
 			
 			document.getElementById("projectInfo").style.animation = "transitionInBottomMegaFar 1s";
 			document.getElementById("projectInfo").style.display = "block"
-		}, 1200)	
+		}, 1000)	
 	} else {
 		//hide everything
 		document.getElementById("unfocusProject").style.animation = "transitionOutLeft 1.8s"
@@ -92,13 +96,19 @@ async function focusProject(projectNum, open = false) {
 			document.getElementById("title").style.display = "block";
 
 			document.getElementById("projectInfo").style.display = "none";
+			document.getElementById("projectInfo").innerHTML = "";
 
 			for(let i = 1; i <= 6; i++) {
 				const img = document.getElementById("img" + i);
-				img.parentElement.parentElement.style.animation = "transitionInBottomFar " + ((6 - (6 - i))/10 + .8) + "s";
+				if((i == 1 || i == 2 || i == 4) && window.innerWidth > window.innerHeight || (i == 3 || i == 5 || i == 6) && window.innerWidth < window.innerHeight) {
+					img.parentElement.parentElement.style.animation = "transitionInLeftFar 1s";
+				}else {
+					img.parentElement.parentElement.style.animation = "transitionInRightFar 1s";
+				}
+				//img.parentElement.parentElement.style.animation = "transitionInBottomFar " + ((6 - (6 - i))/10 + .8) + "s";
 				setTimeout(() => {img.parentElement.parentElement.style.display = "block";}, 800);
 			}
-		}, 1000)
+		}, 800)
 	}
 	
 }

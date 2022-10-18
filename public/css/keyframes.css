@@ -181,6 +181,50 @@ Small things*/
     transform: translateX(-150%);
   }
 }
+@-webkit-keyframes transitionInLeftFar {
+  0% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes transitionInLeftFar {
+  0% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes transitionOutLeftFar {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+@keyframes transitionOutLeftFar {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
 @-webkit-keyframes transitionOutTop {
   0% {
     transform: translateY(0px);
