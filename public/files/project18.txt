@@ -1,2 +1,17 @@
 /img/projects/image18.gif
-A look at my universal 3D multiplayer plugin for unity
+<img src="/img/projects/image18.gif" alt="Unity Multiplayer" width = 40% height = auto> 
+<div class="smaller-title">Flexible Unity Mutliplayer</div>
+This is my 3D Unity mutliplayer plugin that is very versitile and fits in almost any situation.
+
+Here are some features:
+ - Takes and gives player position, rotation, and velocity (3D)
+ - configurable update rate (automaticly conforming player smoothing)
+ - extremly efficient - I couldnt get to a max player amount before my pc couldnt handle the amount of unity projects open
+ - Handles 3D sound very easly
+ - Anything not added can be added with the event system
+
+Things I plan to add:
+ - an option to create rooms with a max player amount
+ - TCP and UDP protocalls instead of http
+ - security
+ - everything can always be more efficient

@@ -1,2 +1,4 @@
 /img/projects/image8.png
-Me starting with hair particles in blender
+<img src="/img/projects/image8.gif" alt="Fuzz Ball" width = 40% height = auto> 
+<div class="smaller-title">Evil Fuzz Ball</div>
+This was more experimentation with hair particles, and I made this as a joke to make fun of my friend with long hair. There really isnt anything more to say about it.

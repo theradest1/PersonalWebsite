@@ -1,2 +1,4 @@
-/img/projects/image15.jpg
-A 3d scan of my teacher's head that I 3d printed
+/img/projects/image15.gif
+<img src="/img/projects/image15.gif" alt="3D Printed Scan" width = 40% height = auto> 
+<div class="smaller-title">3D Printed Scan</div>
+This is a 3D scan I made by taking a lot of photos of my engineering teacher's head, fixing up in blender (remeshing, smoothing, patching) and then 3D printing it. The main thing I learned from this is don't try and 3D scan something that is shiny (like my teachers head) or it will mess a lot of things up.

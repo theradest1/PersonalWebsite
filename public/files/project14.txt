@@ -1,2 +1,4 @@
 /img/projects/image14.gif
-My first attempt at putting together animation and modeling in blender
+<img src="/img/projects/image14.gif" alt="Walking Guy" width = 40% height = auto> 
+<div class="smaller-title">Animated Guy</div>
+This was both my first attempt at modeling a humanoid and animating anything. Both things were kind of rough, but it turned out okay. 

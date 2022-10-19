@@ -1,5 +1,4 @@
-/img/projects/image1.png
-<img id="img1" src="/img/projects/image1.png" alt="img" width = 40% height = auto> 
-A soccer ball that has kind of weird lighting - not sure why
-test1 (;
-and a test 2 :p
+/img/projects/image1.gif
+<img src="/img/projects/image1.gif" alt="Lonly Soccer Ball" width = 40% height = auto> 
+<div class="smaller-title">Lonly Soccer Ball</div>
+I initialy was experimenting with grass with hair particles for the first time, then wanted to add something interesting to the project, so I added a soccer ball. This was made in blender.

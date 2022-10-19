@@ -159,8 +159,12 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 	const pastProject = parseInt(img.src.substring(distanceToID, distanceToID + 4));
 	const num = getNewProjectID(pastProject);
 	const info = await unpackProjectFile(num);
-	setTimeout(() => {img.src = preFiles + info[0]; img.parentElement.parentElement.style.animation = "transitionIn" + dir + "Far 1.5s";}, 900);
+	setTimeout(() => {img.src = preFiles + info[0]; img.parentElement.parentElement.style.animation = "transitionIn" + dir + "Far 3s";}, 900);
 	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
+}
+
+function imageIsLoaded(ID) {
+	console.log("image loaded");
 }
 
 async function unpackProjectFile(ID) {

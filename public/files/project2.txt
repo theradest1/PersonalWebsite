@@ -1,2 +1,4 @@
 /img/projects/image2.gif
-walking through water
+<img src="/img/projects/image2.gif" alt="Walking Through Water" width = 40% height = auto> 
+<div class="smaller-title">Walking Through Water</div>
+This is my human animated character invisible and walking through water - my sister wanted me to make it so I did. If I were to do it again, I would make the character go slower and the water less reflective so you could see the inside.
