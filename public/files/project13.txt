@@ -1,4 +1,4 @@
-/img/projects/image13.gif
+/img/projects/compressed/image13.gif
 <img src="/img/projects/image13.gif" alt="Car" width = 40% height = auto> 
 <div class="smaller-title">Car In Fog</div>
 I created a car, but since it was a bit rough I decided to put it in fog in the night to hide all those amazing things. It then turned into a spooky thing. If I did it again, I would add more movement to the car to show that it's moving.

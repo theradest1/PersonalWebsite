@@ -1,4 +1,4 @@
-/img/projects/image1.gif
-<img src="/img/projects/image1.gif" alt="Lonly Soccer Ball" width = 40% height = auto> 
+/img/projects/compressed/image1.gif
+<img src="/img/projects/image1.png" alt="Lonly Soccer Ball" width = 40% height = auto> 
 <div class="smaller-title">Lonly Soccer Ball</div>
 I initialy was experimenting with grass with hair particles for the first time, then wanted to add something interesting to the project, so I added a soccer ball. This was made in blender.

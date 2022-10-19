@@ -65,6 +65,12 @@ body {
 	}
 }
 
+.smaller-title {
+	font-size: 2em; 
+	font-style: normal;
+	color: var(--text);
+}
+
 .hambar {
 	a {
 		text-decoration: none;
@@ -177,12 +183,12 @@ body {
 			}
 		}
 	}
-	.projectFocusButton {
+	.projectFocusButton { //This is actually now the switching button, but all variable names are focus, so im going to keep it that way
 		position: absolute;
 		width: 10%;
-		height: 10%;
-		bottom: 5px;
-		right: 4px;
+		height: auto;
+		bottom: -3px;
+		right: 5px;
 		img {
 			background: gray;
 			opacity: 50%;

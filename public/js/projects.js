@@ -44,14 +44,14 @@ async function slideIn() {
 		const info = await unpackProjectFile(num);
 		img.src = preFiles + info[0];
 
-		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";}, 400);
+		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar 1s";}, 400);
 		
 	}
 }
 
 async function setProjectInfo(ID) {
 	const info = await unpackProjectFile(ID);
-	console.log(info);
+	//console.log(info);
 	var finalHTML = "";
 	for(let i = 1; i < info.length; i++) {
 		finalHTML += "<br />" + info[i];
@@ -59,9 +59,16 @@ async function setProjectInfo(ID) {
 	document.getElementById("projectInfo").innerHTML = finalHTML;
 }
 
+function getProjectIDFromElement(element) {
+	const parts = element.split("/");
+	console.log(parts);
+	console.log(parts[parts.length - 1].substring(5, 8));
+	return parseInt(parts[(parts.length - 1)].substring(5, 8));
+}
+
 async function focusProject(projectNum, open = false) {
 	if(open) {
-		var projectID = parseInt(document.getElementById("img" + projectNum).src.substring(distanceToID, distanceToID + 4));
+		var projectID = getProjectIDFromElement(document.getElementById("img" + projectNum).src);
 		console.log(document.getElementById("img" + projectNum).src);
 		console.log("focus to project number " + projectID);
 
@@ -124,6 +131,7 @@ function getNewProjectID(oldID = -1) {
 	if(oldID != -1) {
 		availableProjects.push(oldID);
 	}
+	console.log(availableProjects);
 	return num;
 }
 
@@ -156,11 +164,14 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 
 	img.parentElement.parentElement.style.animation = "transitionOut" + dir + " 1s";
 
-	const pastProject = parseInt(img.src.substring(distanceToID, distanceToID + 4));
+	const pastProject = getProjectIDFromElement(img.src);
+	console.log("Past Project: " + pastProject);
 	const num = getNewProjectID(pastProject);
 	const info = await unpackProjectFile(num);
-	setTimeout(() => {img.src = preFiles + info[0]; img.parentElement.parentElement.style.animation = "transitionIn" + dir + "Far 3s";}, 900);
-	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
+	setTimeout(() => {img.parentElement.parentElement.style.opacity = "0%"; img.src = preFiles + info[0]; }, 800);
+	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s";},1700);
+	setTimeout(() => {img.parentElement.parentElement.style.opacity = "100%";},1800);
+	setTimeout(() => {img.parentElement.onclick = link;}, 2600);
 }
 
 function imageIsLoaded(ID) {

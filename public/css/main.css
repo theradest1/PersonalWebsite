@@ -66,6 +66,12 @@ body {
   text-decoration: none;
 }
 
+.smaller-title {
+  font-size: 2em;
+  font-style: normal;
+  color: var(--text);
+}
+
 .hambar {
   -webkit-animation: transitionInLeft 1s;
           animation: transitionInLeft 1s;
@@ -176,9 +182,9 @@ body {
 .projects-container .projectFocusButton {
   position: absolute;
   width: 10%;
-  height: 10%;
-  bottom: 5px;
-  right: 4px;
+  height: auto;
+  bottom: -3px;
+  right: 5px;
 }
 .projects-container .projectFocusButton img {
   background: gray;
