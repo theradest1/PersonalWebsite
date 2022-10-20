@@ -149,6 +149,12 @@ body {
           animation: transitionInLeft 1s;
 }
 
+.asperations {
+  color: var(--text);
+  -webkit-animation: transitionInLeft 1s;
+          animation: transitionInLeft 1s;
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: auto auto auto;

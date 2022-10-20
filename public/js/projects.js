@@ -7,7 +7,19 @@ var distanceToID = 40;//47;
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 document.getElementById("unfocusProject").style.display = "none";
 
-let availableProjects = [1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+let availableProjects = scrambleArray([1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
+
+function scrambleArray(array) {
+	for(let i = 1; i < array.length - 1; i++){
+		const rand = Math.floor(Math.random() * array.length);
+
+		const j = array[rand];
+		array[rand] = array[i];
+		array[i] = j;
+	}
+	console.log(array);
+	return array;
+}
 windowResize();
 
 function windowResize(){
@@ -21,20 +33,6 @@ function windowResize(){
 		container.style.gridTemplateColumns = "33% 33% 33%";
 		container.style.gridTemplateRows = "50% 50%";
 	}
-}
-
-function getGridPosition(index) {
-	const gridEl = document.getElementById("projects-container");
-	let offset = Number(window.getComputedStyle(gridEl.children[0]).gridColumnStart) - 1; 
-	if (isNaN(offset)) {
-	  offset = 0;
-	}
-	
-	const colCount = window.getComputedStyle(gridEl).gridTemplateColumns.split(" ").length;
-	const rowPosition = Math.floor((index + offset) / colCount);
-	const colPosition = (index + offset) % colCount;
-
-	return { row: rowPosition, column: colPosition };
 }
 
 async function slideIn() {
@@ -126,7 +124,7 @@ async function focusProject(projectNum, open = false) {
 }
 
 function getNewProjectID(oldID = -1) {
-	const num = availableProjects[Math.floor(Math.random() * availableProjects.length)];
+	const num = availableProjects[0];
 	availableProjects.splice(availableProjects.indexOf(num), 1);
 	if(oldID != -1) {
 		availableProjects.push(oldID);

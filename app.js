@@ -27,6 +27,9 @@ app.get("/about-me.html", (req, res) => {
 app.get("/projects.html", (req, res) => {
 	res.sendFile(__dirname + "/views/projects.html");
 });
+app.get("/asperations.html", (req, res) => {
+	res.sendFile(__dirname + "/views/asperations.html");
+});
 
 app.listen(port, host, () => {
 	console.log("Server started on port " + port);
