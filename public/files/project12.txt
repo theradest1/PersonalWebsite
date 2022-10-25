@@ -1,4 +1,4 @@
-/img/projects/image12.gif
+/img/projects/compressed/image12.gif
 <img src="/img/projects/image12.gif" alt="Ball Game" width = 40% height = auto> 
 <div class="smaller-title">Rolling Game</div>
 This was my absolute first Unity game, I made it by following a tutorial.

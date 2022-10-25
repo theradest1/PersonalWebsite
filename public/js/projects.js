@@ -8,7 +8,19 @@ console.log(window.location.href);
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 document.getElementById("unfocusProject").style.display = "none";
 
-let availableProjects = [1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+let availableProjects = scrambleArray([1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
+
+function scrambleArray(array) {
+	for(let i = 1; i < array.length - 1; i++){
+		const rand = Math.floor(Math.random() * array.length);
+
+		const j = array[rand];
+		array[rand] = array[i];
+		array[i] = j;
+	}
+	console.log(array);
+	return array;
+}
 windowResize();
 
 function windowResize(){
@@ -24,20 +36,6 @@ function windowResize(){
 	}
 }
 
-function getGridPosition(index) {
-	const gridEl = document.getElementById("projects-container");
-	let offset = Number(window.getComputedStyle(gridEl.children[0]).gridColumnStart) - 1; 
-	if (isNaN(offset)) {
-	  offset = 0;
-	}
-	
-	const colCount = window.getComputedStyle(gridEl).gridTemplateColumns.split(" ").length;
-	const rowPosition = Math.floor((index + offset) / colCount);
-	const colPosition = (index + offset) % colCount;
-
-	return { row: rowPosition, column: colPosition };
-}
-
 async function slideIn() {
 	for(let i = 1; i <= 6; i++) {
 		const num = getNewProjectID();
@@ -45,14 +43,14 @@ async function slideIn() {
 		const info = await unpackProjectFile(num);
 		img.src = preFiles + info[0];
 
-		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar " + (i/10 + .5) + "s";}, 400);
+		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar 1s";}, 400);
 		
 	}
 }
 
 async function setProjectInfo(ID) {
 	const info = await unpackProjectFile(ID);
-	console.log(info);
+	//console.log(info);
 	var finalHTML = "";
 	for(let i = 1; i < info.length; i++) {
 		finalHTML += "<br />" + info[i];
@@ -60,9 +58,16 @@ async function setProjectInfo(ID) {
 	document.getElementById("projectInfo").innerHTML = finalHTML;
 }
 
+function getProjectIDFromElement(element) {
+	const parts = element.split("/");
+	console.log(parts);
+	console.log(parts[parts.length - 1].substring(5, 8));
+	return parseInt(parts[(parts.length - 1)].substring(5, 8));
+}
+
 async function focusProject(projectNum, open = false) {
 	if(open) {
-		var projectID = parseInt(document.getElementById("img" + projectNum).src.substring(distanceToID, distanceToID + 4));
+		var projectID = getProjectIDFromElement(document.getElementById("img" + projectNum).src);
 		console.log(document.getElementById("img" + projectNum).src);
 		console.log("focus to project number " + projectID);
 
@@ -120,11 +125,12 @@ async function focusProject(projectNum, open = false) {
 }
 
 function getNewProjectID(oldID = -1) {
-	const num = availableProjects[Math.floor(Math.random() * availableProjects.length)];
+	const num = availableProjects[0];
 	availableProjects.splice(availableProjects.indexOf(num), 1);
 	if(oldID != -1) {
 		availableProjects.push(oldID);
 	}
+	console.log(availableProjects);
 	return num;
 }
 
@@ -157,11 +163,14 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 
 	img.parentElement.parentElement.style.animation = "transitionOut" + dir + " 1s";
 
-	const pastProject = parseInt(img.src.substring(distanceToID, distanceToID + 4));
+	const pastProject = getProjectIDFromElement(img.src);
+	console.log("Past Project: " + pastProject);
 	const num = getNewProjectID(pastProject);
 	const info = await unpackProjectFile(num);
-	setTimeout(() => {img.src = preFiles + info[0]; img.parentElement.parentElement.style.animation = "transitionIn" + dir + "Far 3s";}, 900);
-	setTimeout(() => {img.parentElement.onclick = link;}, 1800);
+	setTimeout(() => {img.parentElement.parentElement.style.opacity = "0%"; img.src = preFiles + info[0]; }, 800);
+	setTimeout(() => {img.parentElement.parentElement.style.animation = "transitionIn" + dir + " 1s";},1700);
+	setTimeout(() => {img.parentElement.parentElement.style.opacity = "100%";},1800);
+	setTimeout(() => {img.parentElement.onclick = link;}, 2600);
 }
 
 function imageIsLoaded(ID) {

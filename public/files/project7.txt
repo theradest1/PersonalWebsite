@@ -1,4 +1,4 @@
-/img/projects/image7.gif
+/img/projects/compressed/image7.gif
 <img src="/img/projects/image7.gif" alt="Desert" width = 40% height = auto> 
 <div class="smaller-title">Desert</div>
 I'm not sure why I made this, or the thought process while going through it, but I have to admit it is very pretty. The origional video was a slowed down version, but I couldnt find it and I no longer have the computer that had the project file - vary sad.
