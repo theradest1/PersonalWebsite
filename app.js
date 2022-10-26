@@ -17,18 +17,21 @@ app.get("", (req, res) => {
 	res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("/skills.html", (req, res) => {
+app.get("/skills", (req, res) => {
 	res.sendFile(__dirname + "/views/skills.html");
 });
 
-app.get("/about-me.html", (req, res) => {
+app.get("/about-me", (req, res) => {
 	res.sendFile(__dirname + "/views/about-me.html");
 });
-app.get("/projects.html", (req, res) => {
+app.get("/projects", (req, res) => {
 	res.sendFile(__dirname + "/views/projects.html");
 });
-app.get("/asperations.html", (req, res) => {
+app.get("/asperations", (req, res) => {
 	res.sendFile(__dirname + "/views/asperations.html");
+});
+app.get("/use-projects", (req, res) => {
+	res.sendFile(__dirname + "/views/use-projects.html");
 });
 
 app.listen(port, host, () => {
