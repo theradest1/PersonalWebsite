@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--just add ../public to refrences, and ad /views to urls-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Personal Website</title>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/keyframes.css">
+</head>
+<body>
+	<div id="loading" class="loading">Loading...</div>
+	<nav class="navbar">
+		<div id="navbar-left">
+			<ul class="project-demo-list">
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/')"><- Project Demos</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/project-demos/NFL-Fundraiser')">NFL Fundraiser</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/project-demos/circle-physics')">Circle Physics Engine </a> 
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/project-demos/vertex-physics')">Vertex Physics Engine </a> 
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/project-demos/raycaster')">Psudo 3D Engine (Raycasting)</a> 
+				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/project-demos/2d-platformer')">2D Platformer</a> 
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<script src="/js/project-demos.js"></script>
+</body>
+</html>

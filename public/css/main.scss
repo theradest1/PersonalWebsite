@@ -52,6 +52,29 @@ body {
 		}
 	}
 }
+.project-demo-list {
+	animation: transitionInLeft 1s;
+	//margin-top: -.5em;
+	color: var(--backround);
+	margin-left: -2.5em;
+
+	li {
+		padding: .25em 0;
+		font-size: 1.5em;
+		font-style: normal;
+		list-style-type: none;
+		
+		a {
+			text-decoration: none;
+			color: var(--text);
+			&:hover {
+				display: inline-block;
+				font-weight: bold;
+				animation: jump .4s;
+			}
+		}
+	}
+}
 
 .title {
 	font-size: 3em;

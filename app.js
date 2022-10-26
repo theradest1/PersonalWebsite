@@ -30,8 +30,8 @@ app.get("/projects", (req, res) => {
 app.get("/asperations", (req, res) => {
 	res.sendFile(__dirname + "/views/asperations.html");
 });
-app.get("/use-projects", (req, res) => {
-	res.sendFile(__dirname + "/views/use-projects.html");
+app.get("/project-demos", (req, res) => {
+	res.sendFile(__dirname + "/views/project-demos.html");
 });
 
 app.listen(port, host, () => {

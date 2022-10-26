@@ -54,6 +54,29 @@ body {
           animation: jump 0.4s;
 }
 
+.project-demo-list {
+  -webkit-animation: transitionInLeft 1s;
+          animation: transitionInLeft 1s;
+  color: var(--backround);
+  margin-left: -2.5em;
+}
+.project-demo-list li {
+  padding: 0.25em 0;
+  font-size: 1.5em;
+  font-style: normal;
+  list-style-type: none;
+}
+.project-demo-list li a {
+  text-decoration: none;
+  color: var(--text);
+}
+.project-demo-list li a:hover {
+  display: inline-block;
+  font-weight: bold;
+  -webkit-animation: jump 0.4s;
+          animation: jump 0.4s;
+}
+
 .title {
   font-size: 3em;
   font-style: normal;
