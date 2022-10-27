@@ -2,7 +2,8 @@
 
 var preFiles = "";//../public";
 var baseDir = "/";///views/";
-var distanceToID = 40;//47;
+var distanceToID = 43;//47;(
+console.log(window.location.href);
 
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 document.getElementById("unfocusProject").style.display = "none";
