@@ -1,4 +1,4 @@
 /img/projects/compressed/image6.png
-<img src="/img/projects/image6.png" alt="Sword" width = 40% height = auto> 
+<img src="/img/projects/Sword.png" alt="Sword" width = 40% height = auto> 
 <div class="smaller-title">Fantasy Sword</div>
 At this time, my sister and I were getting into D&D and wanted some models of things we would want - so I made this. We also like knives and swords a lot. 

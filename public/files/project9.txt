@@ -1,4 +1,4 @@
 /img/projects/compressed/image9.gif
-<img src="/img/projects/image9.gif" alt="Multiplayer Game" width = 40% height = auto> 
+<img src="/img/projects/MultiplayerGame.gif" alt="Multiplayer Game" width = 40% height = auto> 
 <div class="smaller-title">Multiplayer Game</div>
 My first use of my flexible multiplayer Unity plugin. It was a very simple FPS game that was kind of glitchy. This later became the massive crime game, but it was the first multiplayer game I made from scratch - lots of fun playtesting with friends!

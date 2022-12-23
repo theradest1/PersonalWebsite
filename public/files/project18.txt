@@ -1,5 +1,5 @@
 /img/projects/compressed/image18.gif
-<img src="/img/projects/image18.gif" alt="Unity Multiplayer" width = 40% height = auto> 
+<img src="/img/projects/UnityMultiplayer.gif" alt="Unity Multiplayer" width = 40% height = auto> 
 <div class="smaller-title">Flexible Unity Mutliplayer</div>
 This is my 3D Unity mutliplayer plugin that is very versitile and fits in almost any situation.
 

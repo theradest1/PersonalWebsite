@@ -1,4 +1,4 @@
 /img/projects/compressed/image17.gif
-<img src="/img/projects/image17.gif" alt="Water Simulation" width = 40% height = auto> 
+<img src="/img/projects/WaterSimulation.gif" alt="Water Simulation" width = 40% height = auto> 
 <div class="smaller-title">Water Simulation</div>
 This was a water simulation I did in blender, I went all out with several hours of calculation time for it. It went very well untill near the end where it looks like it starts to corrupt the material or something - I think it is because I was running out of ram for the scene.

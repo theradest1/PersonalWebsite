@@ -1,4 +1,4 @@
 /img/projects/compressed/image11.gif
-<img src="/img/projects/image11.jpg" alt="Arduino Pong" width = 40% height = auto> 
+<img src="/img/projects/ArduinoPong.jpg" alt="Arduino Pong" width = 40% height = auto> 
 <div class="smaller-title">Arduino Pong</div>
 A pong game I made on the arduino that could support 1 or 2 players and had sound effects and everything - everything from complete scratch (besides the obvious) This was my first actual project with the arduino that was responsive and had a purpose.

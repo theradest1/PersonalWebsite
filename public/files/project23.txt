@@ -1,0 +1,4 @@
+/img/projects/compressed/image23.gif
+<img src="/img/projects/P90.png" alt="P90" width = 40% height = auto> 
+<div class="smaller-title">P90</div>
+A P90 that I modeled, textured, rigged, and animated for my friend's fps game: game.stoneblasters.repl.co

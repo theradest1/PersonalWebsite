@@ -1,4 +1,4 @@
 /img/projects/compressed/image16.gif
-<img src="/img/projects/image16.jpg" alt="3D Printer Part" width = 20% height = auto> 
+<img src="/img/projects/3DPrinterPart.jpg" alt="3D Printer Part" width = 20% height = auto> 
 <div class="smaller-title">3D Printer Part</div>
 My Engineering teacher gave me a printer that wasn't working because of a few different things, such as the belt for the baseplate breaking the holder (the part on the right), so I modeled it and printed it - worked on my first try (:

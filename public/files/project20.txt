@@ -1,0 +1,4 @@
+/img/projects/compressed/image20.gif
+<img src="/img/projects/Glock18.png" alt="Glock 18" width = 40% height = auto> 
+<div class="smaller-title">Glock 18</div>
+A Glock 18 that I modeled, textured, rigged, and animated for my friend's fps game: game.stoneblasters.repl.co

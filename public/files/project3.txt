@@ -1,4 +1,4 @@
 /img/projects/compressed/image3.gif
-<img src="/img/projects/image3.gif" alt="Jello Sim" width = 40% height = auto> 
+<img src="/img/projects/JelloSim.gif" alt="Jello Sim" width = 40% height = auto> 
 <div class="smaller-title">Jello Simulation</div>
 This was pretty much my first simulation at all - it was in blender and used sofbody physics with a material that made it look like jello.

@@ -1,4 +1,4 @@
 /img/projects/compressed/image10.gif
-<img src="/img/projects/image10.png" alt="Cup" width = 40% height = auto> 
+<img src="/img/projects/Cup.png" alt="Cup" width = 40% height = auto> 
 <div class="smaller-title">Glass Cup</div>
 A glass cup that I modeled in the donut tutorial then rendered apart from it but empty because it was pretty. This technically was my first self driven 3d modeling project.

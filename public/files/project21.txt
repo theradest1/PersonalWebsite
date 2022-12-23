@@ -1,0 +1,4 @@
+/img/projects/compressed/image21.gif
+<img src="/img/projects/AWP.png" alt="AWP" width = 40% height = auto> 
+<div class="smaller-title">AWP</div>
+An AWP that I modeled, textured, rigged, and animated for my friend's fps game: game.stoneblasters.repl.co

@@ -1,0 +1,4 @@
+/img/projects/compressed/image24.gif
+<img src="/img/projects/PlayerController.png" alt="Player Controller" width = 40% height = auto> 
+<div class="smaller-title">Player Controller</div>
+A very advanced and dynamic player controller for my friend's fps game: game.stoneblasters.repl.co

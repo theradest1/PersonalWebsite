@@ -1,0 +1,4 @@
+/img/projects/compressed/image22.gif
+<img src="/img/projects/Karambit.png" alt="Karambit" width = 40% height = auto> 
+<div class="smaller-title">Karambit</div>
+A karambit (knife) that I modeled, textured, rigged, and animated for my friend's fps game: game.stoneblasters.repl.co

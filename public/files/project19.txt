@@ -1,0 +1,4 @@
+/img/projects/compressed/image19.gif
+<img src="/img/projects/AK47.png" alt="AK47" width = 40% height = auto> 
+<div class="smaller-title">AK47</div>
+An AK47 that I modeled, textured, rigged, and animated for my friend's fps game: game.stoneblasters.repl.co

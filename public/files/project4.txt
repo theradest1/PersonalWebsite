@@ -1,5 +1,5 @@
 /img/projects/compressed/image4.gif
-<img src="/img/projects/image4.gif" alt="3D Packman" width = 40% height = auto> 
+<img src="/img/projects/3DPackman.gif" alt="3D Packman" width = 40% height = auto> 
 <div class="smaller-title">3D Packman</div>
 This was my absolute first Unity project, and my first actual attempt at a 3D game. I chose to make a 3D version of pac-man that ended up being more of a horror game where you are running from the ghosts. I considered going back and fixing it up, but one look at that code and I knew I would have to re-write the whole thing - yikes.
 

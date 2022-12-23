@@ -1,4 +1,4 @@
 /img/projects/compressed/image8.gif
-<img src="/img/projects/image8.png" alt="Fuzz Ball" width = 40% height = auto> 
+<img src="/img/projects/FuzzBall.png" alt="Fuzz Ball" width = 40% height = auto> 
 <div class="smaller-title">Evil Fuzz Ball</div>
 This was more experimentation with hair particles, and I made this as a joke to make fun of my friend with long hair. There really isnt anything more to say about it.

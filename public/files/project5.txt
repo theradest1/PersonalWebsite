@@ -1,4 +1,4 @@
 /img/projects/compressed/image5.gif
-<img src="/img/projects/image5.png" alt="Donut Tutorial" width = 20% height = auto> 
+<img src="/img/projects/DonutTutorial.png" alt="Donut Tutorial" width = 20% height = auto> 
 <div class="smaller-title">Donut and Coffee</div>
 This was my first blender project (of course its a donut, thats how everyone starts) and made it along side a tutorial. This brings back very fond memories of creating it on a 2011 mac that would take an hour for it to render a single frame.
