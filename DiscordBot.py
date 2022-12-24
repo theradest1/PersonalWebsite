@@ -14,7 +14,7 @@ import subprocess
 hiddenInfoFile = open("hiddenInfo.txt")
 hiddenInfo = content = hiddenInfoFile.readlines()
 
-start_file = "/home/server/PersonalWebsite/StartServer.sh"
+start_file = "/home/server/StartServer.sh"
 
 git_dir = "/home/server/PersonalWebsite"
 g = git.cmd.Git(git_dir)
@@ -44,7 +44,8 @@ bot = commands.Bot(command_prefix="@", intents = intents)
 def start_server():
 	global server
 	server = subprocess.Popen("node app.js", shell = True, stdout=subprocess.PIPE)
-	print(server)
+	
+	#print(server)
 	#, shell=True, preexec_fn=os.setsion
 	#countThread = threading.Thread(target=countForServer, name="count")
 	#countThread.start(server)
@@ -67,26 +68,21 @@ def kill_proc_tree(pid):
 async def server(ctx, arg):
 	arg = arg.lower()
 	if arg == "start":
-
 		try:
-			await ctx.send("Starting")
 			start_server()
+			await ctx.send("Server is up: http://baconspersonal.tk")
 		except:
-			await ctx.send("Server Start Failed (not sure why)")
+			await ctx.send("Server Start Failed (will check later)")
+	
 	if arg == "stop":
-		await ctx.send("Stopping")
 		stop_server()
-		#except:
-		#	await ctx.send("Server Stop Failed (not sure why)")
+		await ctx.send("Server has been stopped")
+	
 	if arg == "restart":
+		stop_server()
 		try:
-			await ctx.send("Stopping")
-			stop_server()
-		except:
-			await ctx.send("Server Stop Failed (not sure why)")
-		try:
-			await ctx.send("Starting")
 			start_server()
+			await ctx.send("Server has been restarted")
 		except:
 			await ctx.send("Server Start Failed (not sure why)")
 
@@ -98,7 +94,7 @@ async def git(ctx, arg):
 			g.pull()
 			await ctx.send(f"Git pull successful")
 		except:
-			await ctx.send("Git was not able to do a pull request (not sure why)")
+			await ctx.send("Git was not able to do a pull request (will check later)")
 
 @bot.command()
 async def die(ctx):
