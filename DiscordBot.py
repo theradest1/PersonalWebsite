@@ -14,9 +14,7 @@ import subprocess
 hiddenInfoFile = open("hiddenInfo.txt")
 hiddenInfo = content = hiddenInfoFile.readlines()
 
-start_file = "/home/server/StartServer.sh"
-
-git_dir = "/home/server/PersonalWebsite"
+git_dir = "/home/raspi-server/PersonalWebsite"
 g = git.cmd.Git(git_dir)
 
 intents = discord.Intents.default()
@@ -91,6 +89,7 @@ async def git(ctx, arg):
 	arg = arg.lower()
 	if arg == "pull":
 		try:
+			await ctx.send(f"Pulling...")
 			g.pull()
 			await ctx.send(f"Git pull successful")
 		except:
