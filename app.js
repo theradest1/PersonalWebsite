@@ -34,6 +34,10 @@ app.get("/project-demos", (req, res) => {
 	res.sendFile(__dirname + "/views/project-demos.html");
 });
 
+app.get("/factorio/load", (req, res) => {
+	res.download(__dirname + "/public/files/testFile.txt")
+});
+
 app.listen(port, host, () => {
 	console.log("Server started on port " + port);
 });
