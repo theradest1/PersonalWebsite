@@ -2,3 +2,6 @@
 <img src="/img/projects/PlayerController.png" alt="Player Controller" width = 40% height = auto> 
 <div class="smaller-title">Player Controller</div>
 A very advanced and dynamic player controller for my friend's fps game: game.stoneblasters.repl.co
+
+- has just about everything you would want on a physics based player controller
+- was made in unity

@@ -3,6 +3,8 @@
 <div class="smaller-title">Flexible Unity Mutliplayer</div>
 This is my 3D Unity mutliplayer plugin that is very versitile and fits in almost any situation.
 
+I ended up creating a better version using the UDP protocol but is still very similar to how this one works
+
 Here are some features:
  - Takes and gives player position, rotation, and velocity (3D)
  - configurable update rate (automaticly conforming player smoothing)

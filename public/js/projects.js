@@ -8,7 +8,7 @@ console.log(window.location.href);
 setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
 document.getElementById("unfocusProject").style.display = "none";
 
-let availableProjects = scrambleArray([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]); //I know it's bad, I just don't feel like being quality
+let availableProjects = scrambleArray([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]); //I know it's bad, I just don't feel like being quality
 
 function scrambleArray(array) {
 	for(let i = 1; i < array.length - 1; i++){

@@ -1,0 +1,6 @@
+/img/projects/compressed/image27.png
+<img src="/img/projects/discordBotSchool.png" alt="school discord bot" width = 40% height = auto> 
+<div class="smaller-title">Discord Bot - School events</div>
+
+I made a discord bot that scrapes my school's website (API is only for admins)
+It then send that info to my friend's discord server, letting them know there are late starts, important events and more
