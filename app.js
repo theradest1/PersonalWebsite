@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const port = 4000;
+const port = 4040;
 const host = "0.0.0.0";
 
 app.use(express.static("public"));
