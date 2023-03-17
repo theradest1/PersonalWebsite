@@ -1,16 +1,5 @@
 /*Animations:
 Small things*/
-@-webkit-keyframes wiggle {
-  0%, 100%, 50% {
-    transform: rotateZ(0deg);
-  }
-  25% {
-    transform: rotateZ(2.5deg);
-  }
-  75% {
-    transform: rotateZ(-2.5deg);
-  }
-}
 @keyframes wiggle {
   0%, 100%, 50% {
     transform: rotateZ(0deg);
@@ -22,22 +11,9 @@ Small things*/
     transform: rotateZ(-2.5deg);
   }
 }
-@-webkit-keyframes flip {
-  0%, 80% {
-    transform: rotateX(360deg);
-  }
-}
 @keyframes flip {
   0%, 80% {
     transform: rotateX(360deg);
-  }
-}
-@-webkit-keyframes jump {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
   }
 }
 @keyframes jump {
@@ -49,17 +25,6 @@ Small things*/
   }
 }
 /*Transitions:*/
-@-webkit-keyframes transitionInRight {
-  0% {
-    transform: translateX(150%);
-  }
-  80% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 @keyframes transitionInRight {
   0% {
     transform: translateX(150%);
@@ -69,17 +34,6 @@ Small things*/
   }
   100% {
     transform: translateX(0px);
-  }
-}
-@-webkit-keyframes transitionOutRight {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(150%);
   }
 }
 @keyframes transitionOutRight {
@@ -93,17 +47,6 @@ Small things*/
     transform: translateX(150%);
   }
 }
-@-webkit-keyframes transitionOutRightFar {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
 @keyframes transitionOutRightFar {
   0% {
     transform: translateX(0px);
@@ -115,34 +58,12 @@ Small things*/
     transform: translateX(400%);
   }
 }
-@-webkit-keyframes transitionInRightFar {
-  0% {
-    transform: translateX(400%);
-  }
-  80% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 @keyframes transitionInRightFar {
   0% {
     transform: translateX(400%);
   }
   80% {
     transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@-webkit-keyframes transitionInLeft {
-  0% {
-    transform: translateX(-150%);
-  }
-  80% {
-    transform: translateX(15px);
   }
   100% {
     transform: translateX(0px);
@@ -159,17 +80,6 @@ Small things*/
     transform: translateX(0px);
   }
 }
-@-webkit-keyframes transitionOutLeft {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(-150%);
-  }
-}
 @keyframes transitionOutLeft {
   0% {
     transform: translateX(0px);
@@ -179,17 +89,6 @@ Small things*/
   }
   100% {
     transform: translateX(-150%);
-  }
-}
-@-webkit-keyframes transitionInLeftFar {
-  0% {
-    transform: translateX(-300%);
-  }
-  80% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
 @keyframes transitionInLeftFar {
@@ -203,17 +102,6 @@ Small things*/
     transform: translateX(0px);
   }
 }
-@-webkit-keyframes transitionOutLeftFar {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(-300%);
-  }
-}
 @keyframes transitionOutLeftFar {
   0% {
     transform: translateX(0px);
@@ -223,17 +111,6 @@ Small things*/
   }
   100% {
     transform: translateX(-300%);
-  }
-}
-@-webkit-keyframes transitionOutTop {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(-150%);
   }
 }
 @keyframes transitionOutTop {
@@ -247,17 +124,6 @@ Small things*/
     transform: translateY(-150%);
   }
 }
-@-webkit-keyframes transitionInTop {
-  0% {
-    transform: translateY(-150%);
-  }
-  80% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 @keyframes transitionInTop {
   0% {
     transform: translateY(-150%);
@@ -267,17 +133,6 @@ Small things*/
   }
   100% {
     transform: translateY(0px);
-  }
-}
-@-webkit-keyframes transitionOutTopFar {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(-300%);
   }
 }
 @keyframes transitionOutTopFar {
@@ -291,17 +146,6 @@ Small things*/
     transform: translateY(-300%);
   }
 }
-@-webkit-keyframes transitionInTopFar {
-  0% {
-    transform: translateY(-300%);
-  }
-  80% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 @keyframes transitionInTopFar {
   0% {
     transform: translateY(-300%);
@@ -313,31 +157,9 @@ Small things*/
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes transitionInBottom {
-  0% {
-    transform: translateY(20em);
-  }
-  80% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 @keyframes transitionInBottom {
   0% {
     transform: translateY(20em);
-  }
-  80% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes transitionInBottomMegaFar {
-  0% {
-    transform: translateY(50em);
   }
   80% {
     transform: translateY(-15px);
@@ -357,17 +179,6 @@ Small things*/
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes transitionOutBottomMegaFar {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(50em);
-  }
-}
 @keyframes transitionOutBottomMegaFar {
   0% {
     transform: translateY(0px);
@@ -377,17 +188,6 @@ Small things*/
   }
   100% {
     transform: translateY(50em);
-  }
-}
-@-webkit-keyframes transitionOutBottom {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(150%);
   }
 }
 @keyframes transitionOutBottom {
@@ -401,17 +201,6 @@ Small things*/
     transform: translateY(150%);
   }
 }
-@-webkit-keyframes transitionOutBottomFar {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(300%);
-  }
-}
 @keyframes transitionOutBottomFar {
   0% {
     transform: translateY(0px);
@@ -421,17 +210,6 @@ Small things*/
   }
   100% {
     transform: translateY(300%);
-  }
-}
-@-webkit-keyframes transitionInBottomFar {
-  0% {
-    transform: translateY(300%);
-  }
-  80% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 @keyframes transitionInBottomFar {

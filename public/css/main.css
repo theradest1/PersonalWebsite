@@ -8,7 +8,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--backround);
   color: var(--backround);
   margin: 0;
@@ -19,8 +19,7 @@ body {
   color: black;
   font-size: 3em;
   text-align: center;
-  -webkit-animation: transitionOutTop 0.5s;
-          animation: transitionOutTop 0.5s;
+  animation: transitionOutTop 0.5s;
 }
 
 .navbar {
@@ -31,8 +30,7 @@ body {
 }
 
 .navbar-list {
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
   margin-top: -1.8em;
   color: var(--backround);
   margin-left: -2.5em;
@@ -50,13 +48,11 @@ body {
 .navbar-list li a:hover {
   display: inline-block;
   font-weight: bold;
-  -webkit-animation: jump 0.4s;
-          animation: jump 0.4s;
+  animation: jump 0.4s;
 }
 
 .project-demo-list {
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
   color: var(--backround);
   margin-left: -2.5em;
 }
@@ -73,16 +69,14 @@ body {
 .project-demo-list li a:hover {
   display: inline-block;
   font-weight: bold;
-  -webkit-animation: jump 0.4s;
-          animation: jump 0.4s;
+  animation: jump 0.4s;
 }
 
 .title {
   font-size: 3em;
   font-style: normal;
   color: var(--text);
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
 }
 .title a {
   color: var(--text);
@@ -96,8 +90,7 @@ body {
 }
 
 .hambar {
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -111,8 +104,7 @@ body {
 .hambar .hambar-list li:hover {
   font-weight: bold;
   display: inline-block;
-  -webkit-animation: jump 0.4s;
-          animation: jump 0.4s;
+  animation: jump 0.4s;
 }
 .hambar li {
   list-style-type: none;
@@ -138,13 +130,11 @@ body {
 }
 .skill-list-container div li:hover {
   display: inline-block;
-  -webkit-animation: wiggle 0.2s;
-          animation: wiggle 0.2s;
+  animation: wiggle 0.2s;
 }
 
 .sideways-hero {
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   text-orientation: mixed;
   font-weight: 900;
   font-family: Impact;
@@ -154,34 +144,28 @@ body {
   padding: 0;
   margin: 0;
   color: rgba(0, 0, 0, 0.3725490196);
-  -webkit-animation: transitionInRightFar 1s;
-          animation: transitionInRightFar 1s;
+  animation: transitionInRightFar 1s;
 }
 .sideways-hero span {
   font-size: 7em;
   display: inline-block;
-  -webkit-animation: flip 7s infinite;
-          animation: flip 7s infinite;
-  -webkit-animation-delay: calc(0.3s * var(--i));
-          animation-delay: calc(0.3s * var(--i));
+  animation: flip 7s infinite;
+  animation-delay: calc(0.3s * var(--i));
 }
 
 .school-description {
   color: var(--text);
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
 }
 
 .orgin {
   color: var(--text);
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
 }
 
 .asperations {
   color: var(--text);
-  -webkit-animation: transitionInLeft 1s;
-          animation: transitionInLeft 1s;
+  animation: transitionInLeft 1s;
 }
 
 .projects-container {

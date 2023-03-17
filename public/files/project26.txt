@@ -1,0 +1,27 @@
+/img/projects/compressed/image26.gif
+<img src="/img/projects/movementFPS.png" alt="Movement FPS" width = 40% height = auto> 
+<div class="smaller-title">Movement FPS</div>
+By far the most polished game I have made: a first person shooter that is very focused on movement and countering other classes/weapons
+
+Github project: <a>https://github.com/theradest1/movementFPS</a>
+
+A bit about the server/backend:
+- uses UDP protocol
+- server is made in javascript (Node with Dgram)
+- can run at 32 ticks/sec with 4 players on a raspberry pi
+- can run at 128 ticks/sec with 4 or more players on a PC (as fast as the most competitive FPSs right now)
+- has a dynamic tick rate: if high latency or the server is struggling the tickrate will lower automatically
+- event based
+- almost fully client-processed: the server really only carries messages along while the clients decode and execute those events
+- multi-message sending is supported
+- quick balancing: you can change small class/weapon stats and it will update instantly without having to re-build the game
+
+Gameplay:
+- really fun to play with friends (my friends and I play during lunch)
+- very openended movement to make the skill ceiling higher
+- multiple classes that purposfully counter eachother
+- many weapons along with grenades and flashes
+- some cool maps
+- a replay system that shows how you died
+- player animations
+- absolutly everything was made by me (some maps made by friend)
