@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const port = 4040;
+const port = 4000;
 const host = "0.0.0.0";
 
 app.use(express.static("public"));
@@ -33,9 +33,8 @@ app.get("/asperations", (req, res) => {
 app.get("/project-demos", (req, res) => {
 	res.sendFile(__dirname + "/views/project-demos.html");
 });
-
-app.get("/factorio/load", (req, res) => {
-	res.download(__dirname + "/public/files/testFile.txt")
+app.get("/aplus", (req, res) => {
+	res.sendFile(__dirname + "/views/aplus.html")
 });
 
 app.listen(port, host, () => {
