@@ -179,16 +179,14 @@ body {
 .game-container .game-download {
   width: 90%;
   height: 90%;
+  margin: 3%;
+}
+.game-container .game-download:hover {
+  scale: 1.05;
 }
 .game-container .game-download img {
-  width: auto;
-  height: auto;
-  max-width: 90%;
-  max-height: 90%;
-  scale: 1;
-}
-.game-container .game-download img:hover {
-  scale: 1.05;
+  width: 100%;
+  height: 100%;
 }
 
 .projects-container {

@@ -195,15 +195,13 @@ body {
 	.game-download {
 		width: 90%;
 		height: 90%;
+		margin: 3%;
+		&:hover {
+			scale: 1.05;
+		}
 		img{
-			width: auto;
-			height: auto;
-			max-width: 90%;
-			max-height: 90%;
-			scale: 1;
-			&:hover {
-				scale: 1.05;
-			}
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
