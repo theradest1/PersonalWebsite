@@ -169,6 +169,28 @@ body {
   animation: transitionInLeft 1s;
 }
 
+.game-container {
+  margin: 3%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  max-width: 100%;
+}
+.game-container .game-download {
+  width: 90%;
+  height: 90%;
+}
+.game-container .game-download img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  scale: 1;
+}
+.game-container .game-download img:hover {
+  scale: 1.05;
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: auto auto auto;

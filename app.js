@@ -54,7 +54,7 @@ app.get("/games/surge/updater", (req, res) => {
 	res.sendFile("/public/files/surge/surgeUpdater.zip", { root: __dirname })
 });
 app.get("/games/surge/server", (req, res) => {
-	res.sendFile("/public/files/surge/server.zip", { root: __dirname })
+	res.sendFile("/public/files/surge/surgeServer.zip", { root: __dirname })
 });
 /*app.use(function (req, res) {
 	res.status(404).sendFile('/views/pageNotFound.html', { root: __dirname });
