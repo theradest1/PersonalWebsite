@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+const compression = require('compression');
 
 const app = express();
 const port = 4000;
@@ -11,6 +11,7 @@ app.use("/js", express.static(__dirname + "public/js"));
 app.use("/img", express.static(__dirname + "public/img"));
 app.use("/files", express.static(__dirname + "public/files"));
 app.use("/game", express.static(__dirname + "public/game"));
+app.use(compression());
 
 app.set("views", "./views");
 
