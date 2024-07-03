@@ -7,13 +7,17 @@
 	<title>About Me</title>
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/keyframes.css">
+
+	<script src="/js/transitions.js" defer></script>
+	<script src="/js/about-me.js"></script>
 </head>
 <body>
-	<div id="loading" class="loading">Loading...</div>
-	<div id="title" class="title"><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- About Me</a></div>
-	<div id="school-description" class="school-description">
+	<div id="loading">Loading...</div>
+	<div id="title" class="title" slide-left style="display: none;">
+		<a href="javascript:void(0);" class="icon" onclick="slideOut('/')"><- About Me</a>
+	</div>
+	<div id="school-description" class="school-description" slide-left style="display: none;">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda magnam nisi ipsa eos unde laudantium recusandae, incidunt natus provident praesentium numquam minus dicta aut delectus dolores sunt molestiae eligendi. Tempore!
 	</div>
-	<script src="/js/about-me.js"></script>
 </body>
 </html>

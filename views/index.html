@@ -8,11 +8,14 @@
 	<title>Personal Website</title>
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/keyframes.css">
+
+	<script src="/js/transitions.js"></script>
+	<script src="/js/index.js"></script>
 </head>
 <body>
-	<div id="loading" class="loading">Loading...</div>
+	<div id="loading">Loading...</div>
 	<nav class="navbar">
-		<div id="navbar-left">
+		<div id="navbar-left" slide-left style="display: none;">
 			<ul class="navbar-list">
 				<li>
 					<a href="javascript:void(0);" class="icon" onclick="slideOut('/about-me')">About Me</a>
@@ -29,10 +32,13 @@
 				<li>
 					<a href="javascript:void(0);" class="icon" onclick="slideOut('/asperations')">Asperations </a>
 				</li>
+				<li>
+					<a href="javascript:void(0);" class="icon" onclick="slideOut('/games')">Games </a>
+				</li>
 
 			</ul>
 		</div>
-		<div id="lastname" class="sideways-hero">
+		<div id="lastname" class="sideways-hero" slide-right style="display: none;">
 			<span style="--i:1">B</span>
 			<span style="--i:2">a</span>
 			<span style="--i:3">k</span>
@@ -40,7 +46,7 @@
 			<span style="--i:5">e</span>
 			<span style="--i:6">n</span>
 		</div>
-		<div id="firstname" class="sideways-hero">
+		<div id="firstname" class="sideways-hero"  slide-right style="display: none;">
 			<span style="--i:1">L</span>
 			<span style="--i:2">a</span>
 			<span style="--i:3">n</span>
@@ -49,7 +55,5 @@
 			<span style="--i:6">n</span>
 		</div>
 	</nav>
-
-	<script src="/js/index.js"></script>
 </body>
 </html>

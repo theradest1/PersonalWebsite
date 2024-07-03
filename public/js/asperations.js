@@ -3,7 +3,7 @@ var baseDir = "/";
 
 function slideOut() {
 	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
-	document.getElementById("asperations").style.animation = "transitionOutLeftFar 1.8s"
+	document.getElementById("asperations").style.animation = "transitionOutLeft 1.8s"
 	
 	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);
 	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);

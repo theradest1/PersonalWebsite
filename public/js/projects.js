@@ -43,7 +43,7 @@ async function slideIn() {
 		const info = await unpackProjectFile(num);
 		img.src = preFiles + info[0];
 
-		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottomFar 1s";}, 400);
+		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottom 1s";}, 400);
 		
 	}
 }
@@ -78,9 +78,9 @@ async function focusProject(projectNum, open = false) {
 		for(let i = 1; i <= 6; i++) {
 			const img = document.getElementById("img" + i);
 			if((i == 1 || i == 2 || i == 4) && window.innerWidth > window.innerHeight || (i == 3 || i == 5 || i == 6) && window.innerWidth < window.innerHeight) {
-				img.parentElement.parentElement.style.animation = "transitionOutLeftFar 1s";
+				img.parentElement.parentElement.style.animation = "transitionOutLeft 1s";
 			}else {
-				img.parentElement.parentElement.style.animation = "transitionOutRightFar 1s";
+				img.parentElement.parentElement.style.animation = "transitionOutRight 1s";
 			}
 			setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
 		}
@@ -91,7 +91,7 @@ async function focusProject(projectNum, open = false) {
 
 			setProjectInfo(projectID);
 			
-			document.getElementById("projectInfo").style.animation = "transitionInBottomMegaFar 1s";
+			document.getElementById("projectInfo").style.animation = "transitionInBottom 1s";
 			document.getElementById("projectInfo").style.display = "block"
 		}, 1000)	
 	} else {
@@ -112,11 +112,11 @@ async function focusProject(projectNum, open = false) {
 			for(let i = 1; i <= 6; i++) {
 				const img = document.getElementById("img" + i);
 				if((i == 1 || i == 2 || i == 4) && window.innerWidth > window.innerHeight || (i == 3 || i == 5 || i == 6) && window.innerWidth < window.innerHeight) {
-					img.parentElement.parentElement.style.animation = "transitionInLeftFar 1s";
+					img.parentElement.parentElement.style.animation = "transitionInLeft 1s";
 				}else {
-					img.parentElement.parentElement.style.animation = "transitionInRightFar 1s";
+					img.parentElement.parentElement.style.animation = "transitionInRight 1s";
 				}
-				//img.parentElement.parentElement.style.animation = "transitionInBottomFar " + ((6 - (6 - i))/10 + .8) + "s";
+				//img.parentElement.parentElement.style.animation = "transitionInBottom " + ((6 - (6 - i))/10 + .8) + "s";
 				setTimeout(() => {img.parentElement.parentElement.style.display = "block";}, 800);
 			}
 		}, 800)
@@ -140,11 +140,11 @@ function slideOut() {
 	
 	for(let i = 1; i <= 6; i++) {
 		const img = document.getElementById("img" + i);
-		img.parentElement.parentElement.style.animation = "transitionOutBottomFar " + ((8 - i)/10 + .8) + "s";
+		img.parentElement.parentElement.style.animation = "transitionOutBottom " + ((8 - i)/10 + .8) + "s";
 		setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
 	}
 	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);
-	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottomMegaFar .8s";}, 800);	
+	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);	
 
 	setTimeout(() => {location.href = baseDir;}, 1600);
 }

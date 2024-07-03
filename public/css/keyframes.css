@@ -27,199 +27,111 @@ Small things*/
 /*Transitions:*/
 @keyframes transitionInRight {
   0% {
-    transform: translateX(150%);
+    transform: translateX(110vw);
   }
   80% {
     transform: translateX(-15px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 @keyframes transitionOutRight {
   0% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
   20% {
     transform: translateX(-15px);
   }
   100% {
-    transform: translateX(150%);
-  }
-}
-@keyframes transitionOutRightFar {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
-@keyframes transitionInRightFar {
-  0% {
-    transform: translateX(400%);
-  }
-  80% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(0px);
+    transform: translateX(110vw);
   }
 }
 @keyframes transitionInLeft {
   0% {
-    transform: translateX(-150%);
+    transform: translateX(-110vw);
   }
   80% {
     transform: translateX(15px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 @keyframes transitionOutLeft {
   0% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
   20% {
     transform: translateX(15px);
   }
   100% {
-    transform: translateX(-150%);
-  }
-}
-@keyframes transitionInLeftFar {
-  0% {
-    transform: translateX(-300%);
-  }
-  80% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@keyframes transitionOutLeftFar {
-  0% {
-    transform: translateX(0px);
-  }
-  20% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(-300%);
+    transform: translateX(-110vw);
   }
 }
 @keyframes transitionOutTop {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   20% {
     transform: translateY(15px);
   }
   100% {
-    transform: translateY(-150%);
+    transform: translateY(-110vh);
   }
 }
 @keyframes transitionInTop {
   0% {
-    transform: translateY(-150%);
+    transform: translateY(-110vh);
   }
   80% {
     transform: translateY(15px);
   }
   100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes transitionOutTopFar {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(-300%);
-  }
-}
-@keyframes transitionInTopFar {
-  0% {
-    transform: translateY(-300%);
-  }
-  80% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 @keyframes transitionInBottom {
   0% {
-    transform: translateY(20em);
+    transform: translateY(110vh);
   }
   80% {
     transform: translateY(-15px);
   }
   100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes transitionInBottomMegaFar {
-  0% {
-    transform: translateY(50em);
-  }
-  80% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes transitionOutBottomMegaFar {
-  0% {
-    transform: translateY(0px);
-  }
-  20% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(50em);
+    transform: translateY(0);
   }
 }
 @keyframes transitionOutBottom {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   20% {
     transform: translateY(-15px);
   }
   100% {
-    transform: translateY(150%);
+    transform: translateY(110vh);
   }
 }
-@keyframes transitionOutBottomFar {
+@keyframes transitionLoadingOut {
   0% {
-    transform: translateY(0px);
+    transform: translateX(-50%, -50%);
   }
   20% {
-    transform: translateY(-15px);
+    transform: translate(-50%, 75%);
   }
   100% {
-    transform: translateY(300%);
+    transform: translate(-50%, -110vh);
   }
 }
-@keyframes transitionInBottomFar {
+@keyframes transitionLoadingIn {
   0% {
-    transform: translateY(300%);
+    transform: translate(-50%, 110vh);
   }
   80% {
-    transform: translateY(-15px);
+    transform: translate(-50%, -75%);
   }
   100% {
-    transform: translateY(0px);
+    transform: translate(-50%, -50%);
   }
 }/*# sourceMappingURL=keyframes.css.map */

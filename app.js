@@ -2,7 +2,7 @@ const express = require("express");
 const compression = require('compression');
 
 const app = express();
-const port = 4000;
+const port = 4080;
 const host = "0.0.0.0";
 
 app.use(express.static("public"));

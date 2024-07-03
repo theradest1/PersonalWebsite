@@ -5,7 +5,7 @@ var baseDir = "/";
 
 function slideOut() {
 	document.getElementById("hambar-list").style.animation = "transitionOutLeft 1.8s"
-	document.getElementById("skill-list-container").style.animation = "transitionOutRightFar 1.8s"
+	document.getElementById("skill-list-container").style.animation = "transitionOutRight 1.8s"
 	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
 	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);
 	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);

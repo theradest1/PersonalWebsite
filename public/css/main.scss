@@ -16,11 +16,15 @@ body {
 	height: 100%;
 }
 
-.loading {
+#loading {
 	color: black;
 	font-size: 3em;
 	text-align: center;
-	animation: transitionOutTop .5s;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .navbar {
@@ -31,7 +35,6 @@ body {
 }
 
 .navbar-list {
-	animation: transitionInLeft 1s;
 	margin-top: -1.8em;
 	color: var(--backround);
 	margin-left: -2.5em;
@@ -54,7 +57,6 @@ body {
 	}
 }
 .project-demo-list {
-	animation: transitionInLeft 1s;
 	//margin-top: -.5em;
 	color: var(--backround);
 	margin-left: -2.5em;
@@ -81,7 +83,6 @@ body {
 	font-size: 3em;
 	font-style: normal;
 	color: var(--text);
-	animation: transitionInLeft 1s;
 
 	a {
 		color: var(--text);
@@ -100,7 +101,6 @@ body {
 		text-decoration: none;
 		color: var(--text);
 	}
-	animation: transitionInLeft 1s;
 
 	display: grid;
 	grid-template-columns: 50% 50%;
@@ -161,8 +161,6 @@ body {
 	margin: 0;
 	color: #0000005f;
 
-	animation: transitionInRightFar 1s;
-
 	span {
 		font-size: 7em;
 		display: inline-block;
@@ -173,17 +171,14 @@ body {
 
 .school-description {
 	color: var(--text);
-	animation: transitionInLeft 1s;
 }
 
 .orgin {
 	color: var(--text);
-	animation: transitionInLeft 1s;
 }
 
 .asperations {
 	color: var(--text);
-	animation: transitionInLeft 1s;
 }
 
 .game-container {
