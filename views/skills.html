@@ -7,12 +7,17 @@
 	<title>Skills</title>
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/keyframes.css">
+
+	<script src="/js/transitions.js" defer></script>
+	<script src="/js/skills.js"></script>
 </head>
 <body>
-	<div id="loading" class="loading">Loading...</div>
-	<div id="title" class="title"><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Skills</a></div>
+	<div id="loading">Loading...</div>
+	<div id="title" class="title" slide-left  style="display: none;">
+		<a href="javascript:void(0);" class="icon" onclick="slideOut('/')"><- Skills</a>
+	</div>
 	<nav class="hambar" id="hambar"> 
-		<ul class="hambar-list" id="hambar-list">
+		<ul class="hambar-list" id="hambar-list" slide-left style="display: none;">
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('scale', 'grid')">Scale Info</a></li>
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('blender', 'grid')">Blender 3D</a></li>
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('languages', 'grid')">Languages</a></li>
@@ -22,7 +27,7 @@
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('misc', 'grid')">Misc</a></li>
 		</ul>
 
-		<container class="skill-list-container" id="skill-list-container">
+		<container class="skill-list-container" id="skill-list-container" slide-right style="display: none;">
 			<div id="blender">
 				<ul class="skill-names">
 					<li>Modeling (soft):</li>
@@ -147,6 +152,5 @@
 			</div>
 		</container>
 	</nav>
-	<script src="/js/skills.js"></script>
 </body>
 </html>

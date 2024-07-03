@@ -1,26 +1,27 @@
 //slide in
 document.addEventListener('DOMContentLoaded', function() {
 	//move out loading symbol
-	document.getElementById("loading").style.animation = "transitionLoadingOut .5s";
+	document.getElementById("loading").style.animation = "transitionLoadingOut .6s";
 
 
-	//hide loading symbol, elements move in
+	//unhide elements, animate in
 	setTimeout(() => {
 		document.querySelectorAll(`[slide-left], [slide-right]`).forEach(element =>{
 			element.style.display = "block";
 		})
 
 		document.querySelectorAll(`[slide-left]`).forEach(element =>{
-			element.style.animation = "transitionInLeft .6s";
+			element.style.animation = "transitionInLeft .7s";
 		})
 		document.querySelectorAll(`[slide-right]`).forEach(element =>{
-			element.style.animation = "transitionInRight .6s";
+			element.style.animation = "transitionInRight .7s";
 		})
 	}, 200);
 
+	//hide loading
 	setTimeout(() =>{
 		document.getElementById("loading").style.display = "none";
-	}, 450)
+	}, 550)
 });
 
 
@@ -35,7 +36,7 @@ function slideOut(newHref) {
 	})
 
 	setTimeout(() => {
-		document.getElementById("loading").style.animation = "transitionLoadingIn .5s";
+		document.getElementById("loading").style.animation = "transitionLoadingIn .6s";
 		document.getElementById("loading").style.display = "block";
 	}, 200);
 

@@ -115,10 +115,10 @@ Small things*/
 }
 @keyframes transitionLoadingOut {
   0% {
-    transform: translateX(-50%, -50%);
+    transform: translate(-50%, 0);
   }
   20% {
-    transform: translate(-50%, 75%);
+    transform: translate(-50%, 0);
   }
   100% {
     transform: translate(-50%, -110vh);
@@ -129,9 +129,9 @@ Small things*/
     transform: translate(-50%, 110vh);
   }
   80% {
-    transform: translate(-50%, -75%);
+    transform: translate(-50%, 0);
   }
   100% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
   }
 }/*# sourceMappingURL=keyframes.css.map */

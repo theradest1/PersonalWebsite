@@ -7,13 +7,17 @@
 	<title>About Me</title>
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/keyframes.css">
+
+	<script src="/js/transitions.js" defer></script>
+	<script src="/js/asperations.js"></script>
 </head>
 <body>
-	<div id="loading" class="loading">Loading...</div>
-	<div id="title" class="title"><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Asperations</a></div>
-	<div id="asperations" class="asperations">
+	<div id="loading">Loading...</div>
+	<div id="title" class="title" slide-left style="display: none;">
+		<a href="javascript:void(0);" class="icon" onclick="slideOut('/')"><- Asperations</a>
+	</div>
+	<div id="asperations" class="asperations" slide-left style="display: none;">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, alias. Exercitationem voluptas laborum iste illum, consequuntur reprehenderit omnis officiis nihil dignissimos aperiam ipsa iusto vitae soluta, dolore incidunt officia quod?
 	</div>
-	<script src="/js/asperations.js"></script>
 </body>
 </html>

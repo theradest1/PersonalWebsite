@@ -7,14 +7,18 @@
 	<title>Game Downloads</title>
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/keyframes.css">
+
+	<script src="/js/transitions.js" defer></script>
+	<script src="/js/games.js"></script>
 </head>
 <body>
-	<div id="loading" class="loading">Loading...</div>
-	<div id="title" class="title"><a href="javascript:void(0);" class="icon" onclick="slideOut()"><- Game Downloads</a></div>
+	<div id="loading">Loading...</div>
+	<div id="title" class="title" slide-left style="display: none;">
+		<a href="javascript:void(0);" class="icon" onclick="slideOut('/')"><- Game Downloads</a>
+	</div>
 	<container id="game-container" class="game-container">
-		<a href="/games/surge/updater" class = "game-download"><img src="/files/surge/logo.jpg" alt="surge"></a>
-		<a href="/games/surge/server" class = "game-download"><img src="/files/surge/logo_server.jpg" alt="surge"></a>
+		<a href="/games/surge/updater" class = "game-download"><img src="/files/surge/logo.jpg" alt="surge"  slide-left style="display: none;"></a>
+		<a href="/games/surge/server" class = "game-download"><img src="/files/surge/logo_server.jpg" alt="surge" slide-right style="display: none;"></a>
 	</container>
-	<script src="/js/games.js"></script>
 </body>
 </html>
