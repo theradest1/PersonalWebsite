@@ -2,13 +2,13 @@
 
 var preFiles = "";//../public";
 var baseDir = "/";///views/";
-var distanceToID = 43;//47;(
-console.log(window.location.href);
+var distanceToID = 43;//47;
+//console.log(window.location.href);
 
-setTimeout(() => {document.getElementById("loading").style.display = "none"; slideIn();}, 400);
-document.getElementById("unfocusProject").style.display = "none";
 
-let availableProjects = scrambleArray([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]); //I know it's bad, I just don't feel like being quality
+let availableProjects = scrambleArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]); //I know it's bad, I just don't feel like being quality
+
+addInitialProjects()
 
 function scrambleArray(array) {
 	for(let i = 1; i < array.length - 1; i++){
@@ -21,30 +21,13 @@ function scrambleArray(array) {
 	console.log(array);
 	return array;
 }
-windowResize();
 
-function windowResize(){
-	var container = document.getElementById("projects-container");
-	container.style.height = (window.innerHeight*.88) + "px";
-	if(window.innerWidth < window.innerHeight) { 
-		container.style.gridTemplateColumns = "50% 50%";
-		container.style.gridTemplateRows = "33% 33% 33%";
-	}
-	else {
-		container.style.gridTemplateColumns = "33% 33% 33%";
-		container.style.gridTemplateRows = "50% 50%";
-	}
-}
-
-async function slideIn() {
+async function addInitialProjects() {
 	for(let i = 1; i <= 6; i++) {
 		const num = getNewProjectID();
 		const img = document.getElementById("img" + i);
 		const info = await unpackProjectFile(num);
 		img.src = preFiles + info[0];
-
-		setTimeout(() => {img.parentElement.parentElement.style.display = "block"; img.parentElement.parentElement.style.animation = "transitionInBottom 1s";}, 400);
-		
 	}
 }
 
@@ -132,21 +115,6 @@ function getNewProjectID(oldID = -1) {
 	}
 	console.log(availableProjects);
 	return num;
-}
-
-function slideOut() {
-	document.getElementById("title").style.animation = "transitionOutLeft 1.8s"
-	
-	
-	for(let i = 1; i <= 6; i++) {
-		const img = document.getElementById("img" + i);
-		img.parentElement.parentElement.style.animation = "transitionOutBottom " + ((8 - i)/10 + .8) + "s";
-		setTimeout(() => {img.parentElement.parentElement.style.display = "none";}, 800);
-	}
-	setTimeout(() => {document.getElementById("loading").style.display = "block";}, 800);
-	setTimeout(() => {document.getElementById("loading").style.animation = "transitionInBottom .8s";}, 800);	
-
-	setTimeout(() => {location.href = baseDir;}, 1600);
 }
 
 async function changeImage(ID, direction, direction2, direction3, direction4) {

@@ -1,20 +1,43 @@
+function getTransition(x, y, type, time){
+	//x and y are percents
+	direction = "None"
+	if(x < .4){
+		direction = "Left"
+	}
+	else if(x > .6){
+		direction = "Right"
+	}
+	else{
+		if(Math.random() < .5){
+			direction = "Left"
+		}
+		else{
+			direction = "Right"
+		}
+	}
+
+	return "transition" + type + direction + " " + time + "s"
+}
+
+
 //slide in
 document.addEventListener('DOMContentLoaded', function() {
 	//move out loading symbol
 	document.getElementById("loading").style.animation = "transitionLoadingOut .6s";
 
-
 	//unhide elements, animate in
 	setTimeout(() => {
-		document.querySelectorAll(`[slide-left], [slide-right]`).forEach(element =>{
+		//turn everything on first so that the position info is correct
+		document.querySelectorAll(`[transition-component]`).forEach(element =>{
 			element.style.display = "block";
 		})
 
-		document.querySelectorAll(`[slide-left]`).forEach(element =>{
-			element.style.animation = "transitionInLeft .7s";
-		})
-		document.querySelectorAll(`[slide-right]`).forEach(element =>{
-			element.style.animation = "transitionInRight .7s";
+		document.querySelectorAll(`[transition-component]`).forEach(element =>{
+
+			var rect = element.getBoundingClientRect();
+			var x = (rect.left + rect.right)/2
+			var y = (rect.top + rect.bottom)/2
+			element.style.animation = getTransition(x/window.innerWidth, y/window.innerHeight, "In", 0.7)
 		})
 	}, 200);
 
@@ -28,11 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function slideOut(newHref) {
 	//elements move out
-	document.querySelectorAll(`[slide-left]`).forEach(element =>{
-		element.style.animation = "transitionOutLeft .7s";
-	})
-	document.querySelectorAll(`[slide-right]`).forEach(element =>{
-		element.style.animation = "transitionOutRight .7s";
+	document.querySelectorAll(`[transition-component]`).forEach(element =>{
+		var rect = element.getBoundingClientRect();
+		var x = (rect.left + rect.right)/2
+		var y = (rect.top + rect.bottom)/2
+
+		element.style.animation = getTransition(x/window.innerWidth, y/window.innerHeight, "Out", 0.7)
 	})
 
 	setTimeout(() => {
@@ -42,7 +66,7 @@ function slideOut(newHref) {
 
 	//hide elements, loading moves in
 	setTimeout(() => {
-		document.querySelectorAll(`[slide-left], [slide-right]`).forEach(element =>{
+		document.querySelectorAll(`[transition-component]`).forEach(element =>{
 			element.style.display = "none";
 		})
 	}, 650);

@@ -13,11 +13,11 @@
 </head>
 <body>
 	<div id="loading">Loading...</div>
-	<div id="title" class="title" slide-left  style="display: none;">
+	<div id="title" class="title" transition-component style="display: none;">
 		<a href="javascript:void(0);" class="icon" onclick="slideOut('/')"><- Skills</a>
 	</div>
 	<nav class="hambar" id="hambar"> 
-		<ul class="hambar-list" id="hambar-list" slide-left style="display: none;">
+		<ul class="hambar-list" id="hambar-list" transition-component style="display: none;">
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('scale', 'grid')">Scale Info</a></li>
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('blender', 'grid')">Blender 3D</a></li>
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('languages', 'grid')">Languages</a></li>
@@ -27,7 +27,7 @@
 			<li><a href="javascript:void(0);" class="icon" onclick="toggleSkill('misc', 'grid')">Misc</a></li>
 		</ul>
 
-		<container class="skill-list-container" id="skill-list-container" slide-right style="display: none;">
+		<container class="skill-list-container" id="skill-list-container" transition-component style="display: none;">
 			<div id="blender">
 				<ul class="skill-names">
 					<li>Modeling (soft):</li>

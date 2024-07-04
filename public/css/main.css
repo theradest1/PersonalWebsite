@@ -78,6 +78,7 @@ body {
   font-size: 3em;
   font-style: normal;
   color: var(--text);
+  width: 50%;
 }
 .title a {
   color: var(--text);
@@ -184,13 +185,13 @@ body {
   height: 100%;
 }
 
-.projects-container {
+#projects-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   max-width: 100%;
 }
-.projects-container div {
+#projects-container div {
   position: relative;
   display: none;
   max-width: 100%;
@@ -198,12 +199,12 @@ body {
   margin: 3%;
   background: rgb(78, 78, 78);
 }
-.projects-container .projectImg {
+#projects-container .projectImg {
   position: relative;
   width: 85%;
   height: 85%;
 }
-.projects-container .projectImg img {
+#projects-container .projectImg img {
   width: auto;
   height: auto;
   max-width: 85%;
@@ -211,32 +212,32 @@ body {
   scale: 1;
   transition: all 0.2s;
 }
-.projects-container .projectImg img:hover {
+#projects-container .projectImg img:hover {
   scale: 1.05;
 }
-.projects-container .projectFocusButton {
+#projects-container .projectFocusButton {
   position: absolute;
   width: 10%;
   height: auto;
   bottom: -3px;
   right: 5px;
 }
-.projects-container .projectFocusButton img {
+#projects-container .projectFocusButton img {
   background: gray;
   opacity: 50%;
   width: 100%;
   height: 100%;
   transition: all 0.2s;
 }
-.projects-container .projectFocusButton img:hover {
+#projects-container .projectFocusButton img:hover {
   opacity: 100%;
   background: rgb(46, 46, 46);
 }
-.projects-container a {
+#projects-container a {
   width: 80%;
   height: 80%;
 }
-.projects-container img {
+#projects-container img {
   padding: 5%;
   margin: auto;
 }
