@@ -22,53 +22,15 @@
 	<div id="unfocusProject" class="title" style="display: none;"><a href="javascript:void(0);" onclick="focusProject(0, false)"><- Back</a></div>
 	<div class="projectInfo" id="projectInfo">Lorem ipsum dolor, sit amet conse
 		ctetur adipisicing elit. Quas debitis eos eligendi nobis, ex non sit fugiat alias vel quo! Iste error consectetur unde ut provident animi est rem culpa?</div>
-	<div id="projects-grid">
-		<div transition-component style="display: none;">
-			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(1, true)">
-				<img id="img1" src="/img/image0.png" alt="img" width = auto height = auto>
-			</a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="changeImage('img1', 'Left', 'Left', 'Left', 'Left')"><img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto></a>
-		</div>
-		<div transition-component style="display: none;">
-			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(2, true)">
-				<img id="img2" src="/img/image0.png" alt="img" width = auto height = auto>
-			</a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="changeImage('img2', 'Top', 'Top', 'Top', 'Right')">
-				<img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto>
+	
+	<div id="projects-grid"></div>
+
+	<template project-template>
+		<div transition-component project>
+			<a href="javascript:void(0);" class="projectImg" onclick="focusProject('id')">
+				<img src="/img/image0.png" alt="project img" width="auto" height="100%">
 			</a>
 		</div>
-		<div transition-component style="display: none;">
-			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(3, true)">
-				<img id="img3" src="/img/image0.png" alt="img" width = auto height = auto>
-			</a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="changeImage('img3', 'Top', 'Right', 'Left', 'Left')">
-				<img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto>
-			</a>
-		</div>
-		<div transition-component style="display: none;">
-			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(4, true)">
-				<img id="img4" src="/img/image0.png" alt="img" width = auto height = auto>
-			</a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="changeImage('img4', 'Bottom', 'Left', 'Right', 'Right')">
-				<img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto>
-			</a>
-		</div>
-		<div transition-component style="display: none;">
-			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(5, true)">
-				<img id="img5" src="/img/image0.png" alt="img" width = auto height = auto>
-			</a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="changeImage('img5', 'Bottom', 'Bottom', 'Left', 'Bottom')">
-				<img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto>
-			</a>
-		</div>
-		<div transition-component style="display: none;">
-			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(6, true)">
-				<img id="img6" src="/img/image0.png" alt="img" width = auto height = auto>
-			</a>
-			<a href="javascript:void(0);" class="projectFocusButton" onclick="changeImage('img6', 'Bottom', 'Right', 'Right', 'Bottom')">
-				<img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto>
-			</a>
-		</div>
-	</div>
+	</template>
 </body>
 </html>
