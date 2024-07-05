@@ -13,7 +13,7 @@
 	<script src="/js/transitions.js" defer></script>
 	<script src="/js/projects.js" defer></script>
 </head>
-<body onresize="windowResize()"> 
+<body id="projects-body"> 
 	<div id="loading">Loading...</div>
 	<div id="title" class="title" transition-component style="display: none;">
 		<a href="javascript:void(0);" onclick="slideOut('/')"><- Projects</a>
@@ -22,8 +22,7 @@
 	<div id="unfocusProject" class="title" style="display: none;"><a href="javascript:void(0);" onclick="focusProject(0, false)"><- Back</a></div>
 	<div class="projectInfo" id="projectInfo">Lorem ipsum dolor, sit amet conse
 		ctetur adipisicing elit. Quas debitis eos eligendi nobis, ex non sit fugiat alias vel quo! Iste error consectetur unde ut provident animi est rem culpa?</div>
-	
-	<container id="projects-container">
+	<div id="projects-grid">
 		<div transition-component style="display: none;">
 			<a href="javascript:void(0);" class="projectImg" onclick="focusProject(1, true)">
 				<img id="img1" src="/img/image0.png" alt="img" width = auto height = auto>
@@ -70,6 +69,6 @@
 				<img id="img1Focus" src="/img/cross.png" alt="img" width = auto height = auto>
 			</a>
 		</div>
-	</container>
+	</div>
 </body>
 </html>

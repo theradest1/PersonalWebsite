@@ -123,7 +123,7 @@ async function changeImage(ID, direction, direction2, direction3, direction4) {
 	img.parentElement.onclick = "";
 	let dir = "";
 
-	if(document.getElementById("projects-container").style.gridTemplateColumns != "50% 50%") {
+	if(document.getElementById("projects-grid").style.gridTemplateColumns != "50% 50%") {
 		dir = [direction, direction2][Math.floor(Math.random() * 2)];
 	} else {
 		dir = [direction3, direction4][Math.floor(Math.random() * 2)];
