@@ -37,8 +37,6 @@ async function updateGrid(){
 	rowPercent = 1/rows*100
 	columnPercent = 1/columns*100
 
-	console.log(height/minHeight)
-
 	projectsGrid = document.getElementById("projects-grid")
 	projectsGrid.style.gridTemplateColumns = `repeat(${columns}, ${columnPercent}%)`;
 	projectsGrid.style.gridTemplateRows = `repeat(${rows}, ${rowPercent}%)`;
